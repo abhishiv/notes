@@ -1,0 +1,226 @@
+#+TITLE: Valuation of Firms
+#+AUTHOR: Abhishiv Saxena
+#+URL: https://github.com/abhishiv/notes/Valuation.org
+#+STARTUP: overview
+#+STARTUP: hideblocks
+#+PROPERTY: header-args :mkdirp yes :noweb yes
+#+TAGS:  Definition(d) Excercise(e)
+ 
+* PROGRESS Restating Financial Statements
+** Definitions 
+*** Accounting
+**** ASSETS = LIABILITIES + EQUITY
+***** Operating Assets = Operating Liabilities + LT Debt + Equity
+**** WORKING CAPITAL: The categories related to the cycle of business operations i.e. inventory, accounts receivable, and accounts payable.
+**** 
+*** Corporate Finance
+**** RETURN = PROFIT/INVESTMENT
+**** FCF = NOPLAT − Net Increase in Invested Capital
+*** Basic Principles
+**** Logic of differentiation between operating/financial parts of company during valuation
+**** Need for reorganization of financial statements
+** Calculating Investment(IC = "Investment Capital")
+*** Theory
+**** Invested Capital = LT Debt + Equity = Operating Assets − Operating Liabilities
+**** Total Funds Invested = Invested Capital + Non Operating Assets
+
+** Calculating Return(NOPLAT = "Net Operating Profit Less Adjusted Taxes")
+*** Theory
+**** NOPLAT is operating profit available to both debt/equity holders.
+*** Procedure
+**** First, interest is not subtracted from operating profit, because interest is considered a payment to the company’s financial investors, not an operating expense 
+**** Second, exclude any nonoperating income generated from assets that were excluded from invested capital
+**** Thirdly, to calculate operating taxes, start with reported taxes, add back the tax shield caused by interest expense, and remove the taxes paid on nonoperating income.
+*** Calculations  
+**** Original Financial Statememnts
+***** Sales(CampariOperatingSalesStatement)
+#+NAME: CampariOperatingSalesStatement
+| *Sales Statement* | 2015 | 2016 |
+|-------------------+------+------|
+| *Total sales*     | 1657 | 1727 |
+|                   |      |      |
+|-------------------+------+------|
+***** Cost(CampariOperatingCostStatement) 
+#+NAME: CampariOperatingCostStatement
+| *Cost Statement*          |  2015 |  2016 |
+|---------------------------+-------+-------|
+| Cost of goods sold (COGS) |  -740 |  -742 |
+| Advertising and promotion |  -286 |  -309 |
+| SGAs                      |  -298 |  -323 |
+| One-off items             |   -23 |   -33 |
+|---------------------------+-------+-------|
+| *Total Cost*              | -1347 | -1407 |
+|---------------------------+-------+-------|
+#+TBLFM: @6$2..@6$>=vsum(@I..@II)
+
+***** Non Operating Income(CampariNonOperatingRevenueCostStatement)
+#+NAME: CampariNonOperatingRevenueCostStatement
+| *Non Operating Revenue and Cost*    | 2015 | 2016 |
+|-------------------------------------+------+------|
+| Financial income                    |    8 |   15 |
+| Financial expenses                  |  -69 |  -74 |
+| Put options costs                   |    0 |    1 |
+|-------------------------------------+------+------|
+| One-off's finacial expenses         |    1 |  -25 |
+| Income from associates              |    0 |    0 |
+|-------------------------------------+------+------|
+| *Total Non Operating Income*        |  -60 |  -83 |
+|-------------------------------------+------+------|
+| *Total Interest Income/Expense*     |  -61 |  -58 |
+|-------------------------------------+------+------|
+| *Total Non-Interest Income/Expense* |    1 |  -25 |
+|-------------------------------------+------+------|
+#+TBLFM: @7$2..@7$>=vsum(@I..@III)::@8$2..@8$>=vsum(@I..@II)::@9$2..@9$>=vsum(@II..@III)
+
+***** Income Statement(CampariIncomeStatement)
+#+NAME: CampariIncomeStatement
+| *Income Statement* |  2015 |  2016 |
+|--------------------+-------+-------|
+| *Net sales*        |  1657 |  1727 |
+|--------------------+-------+-------|
+| *Cost*             | -1347 | -1407 |
+|--------------------+-------+-------|
+| *Operating Profit* |   310 |   320 |
+|--------------------+-------+-------|
+| *Other Income*     |   -60 |   -83 |
+|--------------------+-------+-------|
+| *Pre-tax profits*  |   250 |   237 |
+|--------------------+-------+-------|
+| *Taxes*            |   -73 |   -71 |
+|--------------------+-------+-------|
+| *Net profit*       |   177 |   166 |
+|--------------------+-------+-------|
+#+TBLFM: @2$2..@2$>=remote(CampariOperatingSalesStatement,@2$$#)::@3$2..@3$>=remote(CampariOperatingCostStatement,@6$$#)::@4$2..@4$>=vsum(@I..@III)::@5$2..@5$>=remote(CampariNonOperatingRevenueCostStatement,@7$$#)::@6$2..@6$>=vsum(@III..@IIIII)::@8$2..@8$>=vsum(@IIIII..@IIIIIII)
+
+***** D&A Opex
+#+NAME: CampariDAOpex
+| *D&A included into OPEX*  |       |       |
+|---------------------------+-------+-------|
+| COGS                      | -33.4 | -37.2 |
+| Advertising and promotion |  -0.7 |  -0.7 |
+| SGAs                      | -13.2 | -14.8 |
+|---------------------------+-------+-------|
+| *Total D&A*               | -47.3 | -52.7 |
+#+TBLFM:@5$2..@5$>=vsum(@I..@II)
+
+**** Restated Financial Statements
+***** Cost(CampariRestatedOperatingCostStatement)
+      Important: *subtract* D&A *expense*, so as to add it back.
+#+NAME: CampariRestatedOperatingCostStatement
+| *Restated Cost Statement* |    2015 |    2016 |
+|---------------------------+---------+---------|
+| Cost of goods sold (COGS) |  -706.6 |  -704.8 |
+| Advertising and promotion |  -285.3 |  -308.3 |
+| SGAs                      |  -284.8 |  -308.2 |
+|---------------------------+---------+---------|
+| *Total Cost*              | -1276.7 | -1321.3 |
+#+TBLFM: @2$2..@2$>=vsum(remote(CampariOperatingCostStatement,@2$$#), -1*remote(CampariDAOpex,@2$$#))::@3$2..@3$>=vsum(remote(CampariOperatingCostStatement,@3$$#), -1*remote(CampariDAOpex,@3$$#))::@4$2..@4$>=vsum(remote(CampariOperatingCostStatement,@4$$#), -1*remote(CampariDAOpex,@4$$#)::@5$2..@5$>=vsum(@I..@II)
+
+***** Income Statement(CampariRestatedIncomeStatement)
+#+NAME: CampariRestatedIncomeStatement
+| *Income Statement*   |    2015 |    2016 |
+|----------------------+---------+---------|
+| *Net sales*          |    1657 |    1727 |
+|----------------------+---------+---------|
+| *Cost*               | -1276.7 | -1321.3 |
+|----------------------+---------+---------|
+| *EBITDA*             |   380.3 |   405.7 |
+|----------------------+---------+---------|
+| *D&A*                |   -47.3 |   -52.7 |
+|----------------------+---------+---------|
+| *EBIT*               |    333. |    353. |
+|----------------------+---------+---------|
+| *Net Interest*       |     -61 |     -58 |
+|----------------------+---------+---------|
+| *Other Income*       |       1 |     -25 |
+|----------------------+---------+---------|
+| *OneoffItems Income* |     -23 |     -33 |
+|----------------------+---------+---------|
+| *EBT*                |    250. |    237. |
+|----------------------+---------+---------|
+#+TBLFM: @2$2..@2$>=remote(CampariOperatingSalesStatement,@2$$#)::@3$2..@3$>=remote(CampariRestatedOperatingCostStatement,@5$$#)::@4$2..@4$>=vsum(@I..@III)::@5$2..@5$>=remote(CampariDAOpex,@5$$#)::@6$2..@6$>=vsum(@III..@IIIII)::@7$2..@7$>=remote(CampariNonOperatingRevenueCostStatement,@8$$#)::@8$2..@8$>=remote(CampariNonOperatingRevenueCostStatement,@9$$#)::@9$2..@9$>=remote(CampariOperatingCostStatement,@5$$#)::@10$2..@10$>=vsum(@IIIII..@IIIIIIIII)
+
+** Calculating Cashflow(FCF = "Free Cash Flow")
+
+* PROGRESS Estimating Cost of Capital
+** Definitions 
+*** K_{eu}: unlevered cost of equity
+    Rate of return acceptable by equity investors in a completely unlevered firm. Reflects the risk profile associated with corporate assets ignoring capital structure.
+*** K_{d}: levered cost of equity
+    Rate of return acceptable by a form debt.
+*** WACC = (D/V)*K_{d}*(1 - T) + (E/V)*k_{e}
+** Estimated unlevered cost of equity
+*** CAPM
+    R_{i} = r_{f} + B_{i}[R_{m} - r_{f}]
+    Here,  Beta represents a stock’s incremental risk to a diversified investor, where risk is defined as the extent to which the stock covaries with the aggregate stock market. High beta means company must earn and offer higher return to entice investors.
+**** Estimating Risk free rate r_{f}: use zero coupon treasury bonds
+**** Estimating Market risk premium: 5-6%
+**** Estimating Beta
+     Use industry beta, instead of company beta. To undo/normalise the effect of leverage use Modiligani and Miller.
+** Estimating cost of debt
+   After-Tax Cost of Debt = Cost of Debt × (1 − T_{m})
+* TODO Steady State Model
+* TODO Terminal Value
+* PROGRESS Multiples
+  DEADLINE: <2020-07-06 Mon 18:00-20:00>
+  The multiples method seeks to develop a relationship between the actual price of shares of comparable listed companies and an accounting metric (such as net income, cash flows, revenues, etc.)
+** Theory
+*** Assumptions
+**** The company’s value changes proportionally to the internal variables chosen as a measure of performance;
+**** The growth rates of both cash flows and the risk level are constant
+*** Stock and Deal Multiples
+
+** P/E
+** EV/EBIT & EV/EBITDA
+** Other Multiples
+
+** Leverage
+** Unlevered Multiples
+** Multiples and Growth
+** PEG Ratio
+* TODO Mergers and Acquisition
+  DEADLINE: <2020-07-06 Tue 20:00-23:55>
+** Definitions
+*** Acquisition Value = Standalone Value + Merger Synergies :Definition:
+*** Fair Market Value = based on operation company + Merger synergies in group of buyers  :Definition:
+* TODO Rights Issue
+** Definitions
+*** Subscription Offer = Preemptive Rights granted to existing shareholders to buy stock  in order to raise  money :Definition:
+*** TERP = Theoretical Ex-Right Price
+** Setting subscription price                                          
+** Valuing Preemptive rights
+* DONE Carbon
+  CLOSED: [2020-07-06 Mon 17:32]
+** Definitions
+** Carbon Risk
+*** *Policy and Legal*: Policies or regulations that could impact the operational and financial viability of carbon assets i.e. fuel efficiency standards
+*** *Technology*: Developments in the commercial availability and cost of alternative and low-carbon technologies i.e. energy storage, alternative fuels etc.
+*** *Market and Economic*: Changes in market or economic conditions that would negatively impact carbon assets i.e. changes in fossil fuel prices or consumer preferences
+** Carbon Pricing
+*** Approaches
+   The objective of carbon pricing is to shift the social costs of damage back to those who are responsible for them, and who can actually curb them.
+**** Carbon taxes
+**** Emission trading systems(ETS)
+*** External/Internal Carbon prices
+    For managing internal projects.
+** Valuation with Carbon risk
+*** Scenario-Based Valuation and Carbon
+    Pick number of scenarios and drivers. Value them, and create probability for each.
+|------+-----+-----+-----|
+| g/C$ | $15 | 34$ | 60$ |
+|------+-----+-----+-----|
+| 4.5% |  57 |  37 |  10 |
+|   3% |  56 |  36 |  10 |
+| 1.5% |  55 |  35 |  36 |
+|------+-----+-----+-----|
+
+*** Stochastic Simulation Valuation and Carbon
+    Monte Carlo - Crystal Ball
+** Carbon Beta
+*** Theory
+    Alternative to CAPM, a multi factor model which's more appropriate for companies exposed to carbon risks.
+    𝜇_{i} =r_{f} + 𝛽_{iM}*(𝜇_{M} - r_{f}) + 𝛽_{iCO2}*(𝜇_{CO2} − r_{f})
+*** Application
+
+
+ 

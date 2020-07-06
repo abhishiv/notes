@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-07-04 Sat 22:33 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Valuation of Firms</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Abhishiv Saxena" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Valuation of Firms</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org8c6f2c9">1. Restating Financial Statements</a>
+<ul>
+<li><a href="#org6f429a2">1.1. Estimating Cost of Capital</a></li>
+<li><a href="#org0d926a7">1.2. Requirements</a>
+<ul>
+<li><a href="#orgd5a8783">1.2.1. Accounting</a></li>
+<li><a href="#org6405415">1.2.2. Corporate Finance</a></li>
+<li><a href="#org597939f">1.2.3. Basic Principles</a></li>
+</ul>
+</li>
+<li><a href="#org7012f31">1.3. Calculating Investment(IC = "Investment Capital")</a>
+<ul>
+<li><a href="#org72db0d2">1.3.1. Theory</a></li>
+</ul>
+</li>
+<li><a href="#org2708839">1.4. Calculating Return(NOPLAT = "Net Operating Profit Less Adjusted Taxes")</a>
+<ul>
+<li><a href="#org5b0da6b">1.4.1. Theory</a></li>
+<li><a href="#orgeaf57ab">1.4.2. Procedure</a></li>
+<li><a href="#orge457bf3">1.4.3. Calculations</a></li>
+</ul>
+</li>
+<li><a href="#org4e15184">1.5. Caculating Cashflow(FCF = "Free Cash Flow")</a></li>
+</ul>
+</li>
+<li><a href="#orgb48d6cd">2. Estimating Cost of Capital</a>
+<ul>
+<li><a href="#org35dac39">2.1. Requirements</a>
+<ul>
+<li><a href="#org4c14bdd">2.1.1. K<sub>eu</sub>: unlevered cost of equity</a></li>
+<li><a href="#orge0f0cce">2.1.2. K<sub>d</sub>: levered cost of equity</a></li>
+</ul>
+</li>
+<li><a href="#orgacad688">2.2. Estimated unlevered cost of equity</a>
+<ul>
+<li><a href="#orgaf8ae6e">2.2.1. \[WACC=\frac{a}/{a}]\</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgfb27c51">3. Steady State Model</a></li>
+<li><a href="#orgbf51832">4. Terminal Value</a></li>
+<li><a href="#org1f379aa">5. Multiples</a></li>
+<li><a href="#org1a8cbe9">6. Carbon Credits</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8c6f2c9" class="outline-2">
+<h2 id="org8c6f2c9"><span class="section-number-2">1</span> Restating Financial Statements</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org6f429a2" class="outline-3">
+<h3 id="org6f429a2"><span class="section-number-3">1.1</span> Estimating Cost of Capital</h3>
+</div>
+<div id="outline-container-org0d926a7" class="outline-3">
+<h3 id="org0d926a7"><span class="section-number-3">1.2</span> Requirements</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-orgd5a8783" class="outline-4">
+<h4 id="orgd5a8783"><span class="section-number-4">1.2.1</span> Accounting</h4>
+<div class="outline-text-4" id="text-1-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org42a9a80"></a>ASSETS = LIABILITIES + EQUITY<br />
+<ol class="org-ol">
+<li><a id="org85824bf"></a>Operating Assets = Operating Liabilities + LT Debt + Equity<br /></li>
+</ol>
+</li>
+<li><a id="orge7c39ff"></a>WORKING CAPITAL: The categories related to the cycle of business operations i.e. inventory, accounts receivable, and accounts payable.<br /></li>
+<li><a id="org97aded9"></a><br /></li>
+</ol>
+</div>
+<div id="outline-container-org6405415" class="outline-4">
+<h4 id="org6405415"><span class="section-number-4">1.2.2</span> Corporate Finance</h4>
+<div class="outline-text-4" id="text-1-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="org6997cc5"></a>RETURN = PROFIT/INVESTMENT<br /></li>
+<li><a id="org4cb2c73"></a>FCF = NOPLAT − Net Increase in Invested Capital<br /></li>
+</ol>
+</div>
+<div id="outline-container-org597939f" class="outline-4">
+<h4 id="org597939f"><span class="section-number-4">1.2.3</span> Basic Principles</h4>
+<div class="outline-text-4" id="text-1-2-3">
+</div>
+<ol class="org-ol">
+<li><a id="org2215b0c"></a>Logic of differentiation between operating/financial parts of company during valuation<br /></li>
+<li><a id="orgcc31517"></a>Need for reorganization of financial statements<br /></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org7012f31" class="outline-3">
+<h3 id="org7012f31"><span class="section-number-3">1.3</span> Calculating Investment(IC = "Investment Capital")</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-org72db0d2" class="outline-4">
+<h4 id="org72db0d2"><span class="section-number-4">1.3.1</span> Theory</h4>
+<div class="outline-text-4" id="text-1-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgea36e9d"></a>Invested Capital = LT Debt + Equity = Operating Assets − Operating Liabilities<br /></li>
+<li><a id="org8acd470"></a>Total Funds Invested = Invested Capital + Non Operating Assets<br /></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org2708839" class="outline-3">
+<h3 id="org2708839"><span class="section-number-3">1.4</span> Calculating Return(NOPLAT = "Net Operating Profit Less Adjusted Taxes")</h3>
+<div class="outline-text-3" id="text-1-4">
+</div>
+<div id="outline-container-org5b0da6b" class="outline-4">
+<h4 id="org5b0da6b"><span class="section-number-4">1.4.1</span> Theory</h4>
+<div class="outline-text-4" id="text-1-4-1">
+</div>
+<ol class="org-ol">
+<li><a id="org752056b"></a>NOPLAT is operating profit available to both debt/equity holders.<br /></li>
+</ol>
+</div>
+<div id="outline-container-orgeaf57ab" class="outline-4">
+<h4 id="orgeaf57ab"><span class="section-number-4">1.4.2</span> Procedure</h4>
+<div class="outline-text-4" id="text-1-4-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgfbe4c3e"></a>First, interest is not subtracted from operating profit, because interest is considered a payment to the company’s financial investors, not an operating expense<br /></li>
+<li><a id="orgf8e17ac"></a>Second, exclude any nonoperating income generated from assets that were excluded from invested capital<br /></li>
+<li><a id="orga385bed"></a>Thirdly, to calculate operating taxes, start with reported taxes, add back the tax shield caused by interest expense, and remove the taxes paid on nonoperating income.<br /></li>
+</ol>
+</div>
+<div id="outline-container-orge457bf3" class="outline-4">
+<h4 id="orge457bf3"><span class="section-number-4">1.4.3</span> Calculations</h4>
+<div class="outline-text-4" id="text-1-4-3">
+</div>
+<ol class="org-ol">
+<li><a id="org3c00148"></a>Original Financial Statememnts<br />
+<ol class="org-ol">
+<li><a id="orgd6e5386"></a>Sales(CampariOperatingSalesStatement)<br />
+<div class="outline-text-6" id="text-1-4-3-1-1">
+<table id="org757ac80" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left"><b>Sales Statement</b></th>
+<th scope="col" class="org-right">2015</th>
+<th scope="col" class="org-right">2016</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total sales</b></td>
+<td class="org-right">1657</td>
+<td class="org-right">1727</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li><a id="org0edaff1"></a>Cost(CampariOperatingCostStatement)<br />
+<div class="outline-text-6" id="text-1-4-3-1-2">
+<table id="orge4cae90" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left"><b>Cost Statement</b></th>
+<th scope="col" class="org-right">2015</th>
+<th scope="col" class="org-right">2016</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Cost of goods sold (COGS)</td>
+<td class="org-right">-740</td>
+<td class="org-right">-742</td>
+</tr>
+
+<tr>
+<td class="org-left">Advertising and promotion</td>
+<td class="org-right">-286</td>
+<td class="org-right">-309</td>
+</tr>
+
+<tr>
+<td class="org-left">SGAs</td>
+<td class="org-right">-298</td>
+<td class="org-right">-323</td>
+</tr>
+
+<tr>
+<td class="org-left">One-off items</td>
+<td class="org-right">-23</td>
+<td class="org-right">-33</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><b>Total Cost</b></td>
+<td class="org-right">-1347</td>
+<td class="org-right">-1407</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+
+<li><a id="org1504310"></a>Non Operating Income(CampariNonOperatingRevenueCostStatement)<br />
+<div class="outline-text-6" id="text-1-4-3-1-3">
+<table id="org2cc94e3" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left"><b>Non Operating Revenue and Cost</b></th>
+<th scope="col" class="org-right">2015</th>
+<th scope="col" class="org-right">2016</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Financial income</td>
+<td class="org-right">8</td>
+<td class="org-right">15</td>
+</tr>
+
+<tr>
+<td class="org-left">Financial expenses</td>
+<td class="org-right">-69</td>
+<td class="org-right">-74</td>
+</tr>
+
+<tr>
+<td class="org-left">Put options costs</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">One-off's finacial expenses</td>
+<td class="org-right">1</td>
+<td class="org-right">-25</td>
+</tr>
+
+<tr>
+<td class="org-left">Income from associates</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><b>Total Non Operating Income</b></td>
+<td class="org-right">-60</td>
+<td class="org-right">-83</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><b>Total Interest Income/Expense</b></td>
+<td class="org-right">-61</td>
+<td class="org-right">-58</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><b>Total Non-Interest Income/Expense</b></td>
+<td class="org-right">1</td>
+<td class="org-right">-25</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+
+<li><a id="org85871fb"></a>Income Statement(CampariIncomeStatement)<br />
+<div class="outline-text-6" id="text-1-4-3-1-4">
+<table id="org433c118" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left"><b>Income Statement</b></th>
+<th scope="col" class="org-right">2015</th>
+<th scope="col" class="org-right">2016</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Net sales</b></td>
+<td class="org-right">1657</td>
+<td class="org-right">1727</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><b>Cost</b></td>
+<td class="org-right">-1347</td>
+<td class="org-right">-1407</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><b>Operating Profit</b></td>
+<td class="org-right">310</td>
+<td class="org-right">320</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><b>Other Income</b></td>
+<td class="org-right">-60</td>
+<td class="org-right">-83</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><b>Pre-tax profits</b></td>
+<td class="org-right">250</td>
+<td class="org-right">237</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><b>Taxes</b></td>
+<td class="org-right">-73</td>
+<td class="org-right">-71</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><b>Net profit</b></td>
+<td class="org-right">177</td>
+<td class="org-right">166</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+
+<li><a id="orge64842b"></a>D&amp;A Opex<br />
+<div class="outline-text-6" id="text-1-4-3-1-5">
+<table id="org4339732" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left"><b>D&amp;A included into OPEX</b></th>
+<th scope="col" class="org-right">&#xa0;</th>
+<th scope="col" class="org-right">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">COGS</td>
+<td class="org-right">-33.4</td>
+<td class="org-right">-37.2</td>
+</tr>
+
+<tr>
+<td class="org-left">Advertising and promotion</td>
+<td class="org-right">-0.7</td>
+<td class="org-right">-0.7</td>
+</tr>
+
+<tr>
+<td class="org-left">SGAs</td>
+<td class="org-right">-13.2</td>
+<td class="org-right">-14.8</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><b>Total D&amp;A</b></td>
+<td class="org-right">-47.3</td>
+<td class="org-right">-52.7</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="orgaec68b2"></a>Restated Financial Statements<br />
+<ol class="org-ol">
+<li><a id="orga6bede6"></a>Cost(CampariRestatedOperatingCostStatement)<br />
+<div class="outline-text-6" id="text-1-4-3-2-1">
+<p>
+Important: <b>subtract</b> D&amp;A <b>expense</b>, so as to add it back.
+</p>
+<table id="org88ed916" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left"><b>Restated Cost Statement</b></th>
+<th scope="col" class="org-right">2015</th>
+<th scope="col" class="org-right">2016</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Cost of goods sold (COGS)</td>
+<td class="org-right">-706.6</td>
+<td class="org-right">-704.8</td>
+</tr>
+
+<tr>
+<td class="org-left">Advertising and promotion</td>
+<td class="org-right">-285.3</td>
+<td class="org-right">-308.3</td>
+</tr>
+
+<tr>
+<td class="org-left">SGAs</td>
+<td class="org-right">-284.8</td>
+<td class="org-right">-308.2</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><b>Total Cost</b></td>
+<td class="org-right">-1276.7</td>
+<td class="org-right">-1321.3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+
+<li><a id="org60b2814"></a>Income Statement(CampariRestatedIncomeStatement)<br />
+<div class="outline-text-6" id="text-1-4-3-2-2">
+<table id="org1da79f6" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left"><b>Income Statement</b></th>
+<th scope="col" class="org-right">2015</th>
+<th scope="col" class="org-right">2016</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Net sales</b></td>
+<td class="org-right">1657</td>
+<td class="org-right">1727</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><b>Cost</b></td>
+<td class="org-right">-1276.7</td>
+<td class="org-right">-1321.3</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><b>EBITDA</b></td>
+<td class="org-right">380.3</td>
+<td class="org-right">405.7</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><b>D&amp;A</b></td>
+<td class="org-right">-47.3</td>
+<td class="org-right">-52.7</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><b>EBIT</b></td>
+<td class="org-right">333.</td>
+<td class="org-right">353.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><b>Net Interest</b></td>
+<td class="org-right">-61</td>
+<td class="org-right">-58</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><b>Other Income</b></td>
+<td class="org-right">1</td>
+<td class="org-right">-25</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><b>OneoffItems Income</b></td>
+<td class="org-right">-23</td>
+<td class="org-right">-33</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><b>EBT</b></td>
+<td class="org-right">250.</td>
+<td class="org-right">237.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org4e15184" class="outline-3">
+<h3 id="org4e15184"><span class="section-number-3">1.5</span> Caculating Cashflow(FCF = "Free Cash Flow")</h3>
+</div>
+</div>
+
+
+<div id="outline-container-orgb48d6cd" class="outline-2">
+<h2 id="orgb48d6cd"><span class="section-number-2">2</span> Estimating Cost of Capital</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org35dac39" class="outline-3">
+<h3 id="org35dac39"><span class="section-number-3">2.1</span> Requirements</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org4c14bdd" class="outline-4">
+<h4 id="org4c14bdd"><span class="section-number-4">2.1.1</span> K<sub>eu</sub>: unlevered cost of equity</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<p>
+Rate of return acceptable by equity investors in a completely unlevered firm. Reflects the risk profile associated with corporate assets ignoring capital structure.
+</p>
+</div>
+</div>
+<div id="outline-container-orge0f0cce" class="outline-4">
+<h4 id="orge0f0cce"><span class="section-number-4">2.1.2</span> K<sub>d</sub>: levered cost of equity</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<p>
+Rate of return acceptable by a form debt.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgacad688" class="outline-3">
+<h3 id="orgacad688"><span class="section-number-3">2.2</span> Estimated unlevered cost of equity</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-orgaf8ae6e" class="outline-4">
+<h4 id="orgaf8ae6e"><span class="section-number-4">2.2.1</span> \[WACC=\frac{a}/{a}]\</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfb27c51" class="outline-2">
+<h2 id="orgfb27c51"><span class="section-number-2">3</span> Steady State Model</h2>
+</div>
+<div id="outline-container-orgbf51832" class="outline-2">
+<h2 id="orgbf51832"><span class="section-number-2">4</span> Terminal Value</h2>
+</div>
+<div id="outline-container-org1f379aa" class="outline-2">
+<h2 id="org1f379aa"><span class="section-number-2">5</span> Multiples</h2>
+</div>
+<div id="outline-container-org1a8cbe9" class="outline-2">
+<h2 id="org1a8cbe9"><span class="section-number-2">6</span> Carbon Credits</h2>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Abhishiv Saxena</p>
+<p class="date">Created: 2020-07-04 Sat 22:33</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
