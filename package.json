@@ -1,0 +1,21 @@
+{
+  "name": "abhishiv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "build": "ls | grep -v build | xargs mv -t build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishiv/notes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhishiv/notes/issues"
+  },
+  "homepage": "https://github.com/abhishiv/notes#readme"
+}
