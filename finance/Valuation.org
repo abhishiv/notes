@@ -5,8 +5,8 @@
 #+STARTUP: hideblocks
 #+PROPERTY: header-args :mkdirp yes :noweb yes
 #+TAGS:  Definition(d) Excercise(e)
-#+HTML_HEAD_EXTRA: <link rel="stylesheet" type="text/css" href="../.org/theme/styles.css" />
-#+I_OPT: view:info mouse:underline up:index.html home:http://github.com/abhishiv toc:t
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" type="text/css" href="../build/org/theme/styles.css" />
+
  
 * IN-PROGRESS Restating Financial Statements
 ** Definitions 
