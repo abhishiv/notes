@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css?family=Cabin:400,500,700|Fira+Sans:400,500,700|Indie+Flower|Montserrat:400,500,700|Nunito+Sans:400,600,700|Open+Sans:400,700|Slabo+27px|Source+Sans+Pro:400,600,700|Titillium+Web:400,600,700|Yanone+Kaffeesatz:400,500,700&display=swap"
+);
+
+@import url("https://fonts.googleapis.com/css?family=Cabin:400,500,700|Fira+Sans:400,500,700|Indie+Flower|Montserrat:400,500,700|Nunito+Sans:400,600,700|Open+Sans:400,700|Slabo+27px|Source+Sans+Pro:400,600,700|Titillium+Web:400,600,700|Yanone+Kaffeesatz:400,500,700&display=swap"
+);
+@import url("https://cdn.jsdelivr.net/npm/@oss-stealth/hub@0.0.2/fonts/GTWalsheimPro/GTWalsheimPro.css");
+
+table.org-info-js_info-navigation {
+    margin: 0;
+}
+
+p#text-before-first-headline {
+    /* display: none; */
+}
+
+body {
+    position: relative;
+}
+
+div#org-info-js-window {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {font-family: "Fira Sans";font-weight: normal;/* text-decoration: underline; */}
+
+* {
+    box-sizing: border-box;
+}
+
+ul, ol {
+ 
+    background-size: 3px auto;
+    background-repeat: no-repeat;
+    padding: 15px;
+
+}
+
+li {
+    margin: 15px 0;
+}
+
+div#content {
+    position: relative;
+}
+
+div#org-info-js-window {
+    position: relative;
+}
+
+table.org-info-js_info-navigation {
+    position: sticky;
+    top: 0;
+    font-style: normal !important;
+    font-family: "Fira Sans" !important;
+    border-bottom: 1px solid #ddd !important;
+}
+
+p#text-before-first-headline {
+    margin: 0;
+}
+
+table.org-info-js_info-navigation *, table.org-info-js_info-navigation a {
+    font-style: normal !important;
+    font-family: monospace;
+    font-family: "Open Sans";
+}
+
+html, body {
+    background: #f6f9fc;
+    font-family: "Open Sans";
+    margin: 0;
+}
+
+table {
+    background: white;
+    border: 1px;
+    font-family: monospace;
+}
+
+a {
+    color: inherit;
+    text-decoration: underline;
+    font-family: monospace;
+}
+
+h1,h2,h3,h4,h5,h6,h7,h8,h9,h10 {font-family: "Slabo 27px";}
+#content {
+    padding-left: 300px;
+    max-width: 900px;
+}
+
+div#table-of-contents {
+    position: fixed;
+    left: 0;
+    width: 280px;
+    background: white;
+    top: 0;
+    overflow: auto;
+    max-height: 100vh;
+    padding: 0 10px;
+    border-right: 1px solid #ddd;
+
+}
+
+li {}
+
+div#table-of-contents li, div#table-of-contents ul, div#table-of-contents ol {
+    /* margin: 0; */
+    padding: 0 0 0 5px;
+}
+
+div#table-of-contents li {
+    margin: 0;
+    padding: 0;
+}

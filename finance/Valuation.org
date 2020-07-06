@@ -1,12 +1,14 @@
 #+TITLE: Valuation of Firms
 #+AUTHOR: Abhishiv Saxena
-#+URL: https://github.com/abhishiv/notes/Valuation.org
+#+URL: https://github.com/abhishiv/notes/finance/Valuation.org
 #+STARTUP: overview
 #+STARTUP: hideblocks
 #+PROPERTY: header-args :mkdirp yes :noweb yes
 #+TAGS:  Definition(d) Excercise(e)
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" type="text/css" href="../.org/theme/styles.css" />
+#+I_OPT: view:info mouse:underline up:index.html home:http://github.com/abhishiv toc:t
  
-* PROGRESS Restating Financial Statements
+* IN-PROGRESS Restating Financial Statements
 ** Definitions 
 *** Accounting
 **** ASSETS = LIABILITIES + EQUITY
@@ -142,7 +144,7 @@
 
 ** Calculating Cashflow(FCF = "Free Cash Flow")
 
-* PROGRESS Estimating Cost of Capital
+* TODO Estimating Cost of Capital
 ** Definitions 
 *** K_{eu}: unlevered cost of equity
     Rate of return acceptable by equity investors in a completely unlevered firm. Reflects the risk profile associated with corporate assets ignoring capital structure.
@@ -161,19 +163,53 @@
    After-Tax Cost of Debt = Cost of Debt × (1 − T_{m})
 * TODO Steady State Model
 * TODO Terminal Value
-* PROGRESS Multiples
+* IN-PROGRESS Multiples  
   DEADLINE: <2020-07-06 Mon 18:00-20:00>
   The multiples method seeks to develop a relationship between the actual price of shares of comparable listed companies and an accounting metric (such as net income, cash flows, revenues, etc.)
-** Theory
+
+|------------------+-----------------------------|
+| Enterprise Value | Equity Value                |
+|------------------+-----------------------------|
+| EV/EBIT          | Price by Earning: P/E       |
+| EV/EBITDA        | Price by Cash earning: P/CE |
+| EV/Sales         | Price by Book Value: P/BV   |
+|------------------+-----------------------------|
+
+**  Theory
 *** Assumptions
 **** The company’s value changes proportionally to the internal variables chosen as a measure of performance;
 **** The growth rates of both cash flows and the risk level are constant
-*** Stock and Deal Multiples
+*** Concept
+  - The financial method creates cash flow projections based on estimations on cost of capital, and projection on growth rate.
+  - The multiples method avoids these estimations and takes the expected growth rate and risk appreciation directly from market data through the use of multiples.
+**** Stock and Deal Multiples
+     Multiples can refer to values taken from two different market contexts:
+     - The stock market
+     - The market for corporate control
+     MARKET VALUE = STAND ALONE VALUE + PREMIUM
+**** Financial and Business Multiples
+***** Financial multiples identify the connection between a equity market price and some important measures such as cash flows, net income, or EBITDA
+***** Business multiples link the equity market price to specific elements which are relevant for the business model typical of the sector the company(RPU for telecom i.e.)
+*** Common multiples
+**** P or EV 
+     P can be calculated by EV by subtracting market value of debt.
+**** Direct or Indirect
+     - Direct: Measure how much value company is generating P/E, or EV/EBITDA
+     - Indirect: Unable to measure this - P/BV, or EV/Sales
+**** Current, Trailing, and Leading Multiples
+     - Current: last available balance sheet
+     - Trailing: last 12m
+     - Leading: future results
+|--------------+---------------+--------------|
+| Current      | Trailing      | Leading      |
+| P_{0}/E_{t0} | P_{0}/E_{ltm} | P_{0}/E_{t1} |
+
+We should be consistet in which time period to choose in calculated, and then applying that multiple to variables. 
 
 ** P/E
+
 ** EV/EBIT & EV/EBITDA
 ** Other Multiples
-
 ** Leverage
 ** Unlevered Multiples
 ** Multiples and Growth
