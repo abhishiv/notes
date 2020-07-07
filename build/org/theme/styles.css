@@ -100,7 +100,7 @@ div#table-of-contents {
     top: 0;
     overflow: auto;
     max-height: 100vh;
-    padding: 0 10px;
+    padding: 0 15px 0 20px;
     border-right: 1px solid #ddd;
 
 }
