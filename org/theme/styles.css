@@ -132,7 +132,7 @@ div#table-of-contents {
     color: royalblue;
     color: black;
     font-weight: bold;
-
+    text-decoration:underline;
 }
 
 
@@ -162,4 +162,10 @@ tbody {
         padding: 0;
     }
 
+}
+div#text-table-of-contents > ul > li > a {
+    text-transform: uppercase;
+    /* color: black; */
+    font-family: "GT Walsheim Pro";
+    font-weight: bold;
 }
