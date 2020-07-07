@@ -1,6 +1,6 @@
 #+TITLE: Valuation of Firms
 #+AUTHOR: Abhishiv Saxena
-#+URL: https://github.com/abhishiv/notes/finance/Valuation.org
+#+URL: https://abhishiv.netlify.app/finance/valuation
 #+STARTUP: overview
 #+STARTUP: hideblocks
 #+PROPERTY: header-args :mkdirp yes :noweb yes
