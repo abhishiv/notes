@@ -83,7 +83,13 @@ a {
 
 }
 
-h1,h2,h3,h4,h5,h6,h7,h8,h9,h10 {font-family: "Slabo 27px";}
+h1,h2,h3,h4,h5,h6,h7,h8,h9,h10 {
+    /* font-family: "Slabo 27px"; */
+    /* text-transform: uppercase; */
+    color: black;
+    font-weight: bold;
+
+}
 #content {
     padding-left: 300px;
     max-width: 900px;
