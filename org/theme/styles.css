@@ -108,6 +108,11 @@ div#table-of-contents {
         margin: 4px 0;
         display: block;
         color: #555;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        overflow: hidden;
+
 }
 #table-of-contents a.active {
     color: royalblue;
