@@ -122,7 +122,7 @@ li {}
 div#table-of-contents li, div#table-of-contents ul, div#table-of-contents ol {
     /* margin: 0; */
     padding: 0 0 0 5px;
-    list-style: initial;
+    list-style: none;
 }
 
 div#table-of-contents li {
