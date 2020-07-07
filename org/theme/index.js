@@ -1,6 +1,6 @@
 var observer = new IntersectionObserver(
   function(entries) {
-    if (entries[0].isIntersecting === true) {
+      if (entries[0].isIntersecting === true && document.body.clientWidth  > 700) {
       scrollIn(entries[0].target.id);
     }
   },
