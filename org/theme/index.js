@@ -18,7 +18,7 @@ var scrollIn = function(id) {
       el.classList.remove("active");
     });
     el.classList.add("active");
-    el.scrollIntoView();
+    el.scrollIntoViewIfNeeded();
   }
 };
 window.addEventListener("load", event => {
