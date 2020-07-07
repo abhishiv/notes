@@ -156,7 +156,8 @@ div#table-of-contents li {
     div#table-of-contents {
         position: static;
         width: 100%;
-        max-height: auto;
+        max-height: none;
+        background: transparent;
     }
     #content {
         padding: 0;
