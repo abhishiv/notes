@@ -83,7 +83,7 @@ table {
 a {
     color: inherit;
     text-decoration: underline;
-    font-family: monospace;
+
 }
 
 h1,h2,h3,h4,h5,h6,h7,h8,h9,h10 {font-family: "Slabo 27px";}
@@ -104,6 +104,19 @@ div#table-of-contents {
     border-right: 1px solid #ddd;
 
 }
+#table-of-contents a {
+        color: inherit;
+        text-decoration: none;
+        /* font-family: monospace; */
+        margin: 4px 0;
+        display: block;
+        color: #555;
+}
+#table-of-contents a.active {
+    color: royalblue;
+
+}
+
 
 li {}
 

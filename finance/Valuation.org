@@ -7,6 +7,7 @@
 #+TAGS:  Definition(d) Excercise(e)
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" type="text/css" href="../org/theme/styles.css" />
 #+HTML_HEAD_EXTRA: <script type="text/javascript" src="../org/theme/index.js" />
+#+OPTIONS:   num:nil
  
 * IN-PROGRESS Restating Financial Statements
 ** Definitions 
