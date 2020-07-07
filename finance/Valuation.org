@@ -163,7 +163,7 @@
    After-Tax Cost of Debt = Cost of Debt × (1 − T_{m})
 * TODO Steady State Model
 * TODO Terminal Value
-* IN-PROGRESS Multiples  
+* TODO Multiples  
   DEADLINE: <2020-07-06 Mon 18:00-20:00>
   The multiples method seeks to develop a relationship between the actual price of shares of comparable listed companies and an accounting metric (such as net income, cash flows, revenues, etc.)
 
@@ -207,18 +207,57 @@
 We should be consistet in which time period to choose in calculated, and then applying that multiple to variables. 
 
 ** P/E
-
+*** Steady state
+*** Growth
 ** EV/EBIT & EV/EBITDA
+*** Steady state
+*** Growth
 ** Other Multiples
 ** Leverage
 ** Unlevered Multiples
 ** Multiples and Growth
 ** PEG Ratio
-* TODO Mergers and Acquisition
+** Value Maps
+* IN-PROGRESS Acquisition Value
   DEADLINE: <2020-07-06 Tue 20:00-23:55>
 ** Definitions
 *** Acquisition Value = Standalone Value + Merger Synergies :Definition:
 *** Fair Market Value = based on operation company + Merger synergies in group of buyers  :Definition:
+** Value Created by an Acquisition
+   NPV_{acq} = W_{acq} - P
+   or the value created by and acquisition is equal to the PV of cashflows of acquired firm less the price paid for it.
+*** Differential approach
+**** Effect on cash flow
+     - Incremental flows due to collusive policies
+     - Incremental flows due to gains in operational efficiency
+     - Incremental flows due to gains of intangible natures(marketing etc)
+**** Effect on risk profile
+     - Positive effects: Leverage over suppliers/buyers
+     - Negative effects: in case of vertical integration
+**** Effect on credit profile
+     - If debts increases, so does EV due to tax shields.
+*** Benifits
+    W_{acq} = W_{base} + W_{s} + W_{o} where
+    - W_{base} = base value
+    - W_{s} = value of synergies
+    - W_{o} = value of opportunities created by the acquisition
+** Value-Components Model
+*** Model
+*** Application
+** Further Considerations in Valuing Acquisitions 
+*** Analysis Standpoint
+*** Estimation of Cash flow
+*** Time Horizon
+*** Debit profile
+*** Asset-Side versus Equity-Side
+** Acquisition Value of Plastic Materials Co
+** Acquisition Value of Controlling Interests
+
+** Other Determinants of Control Premium
+** Acquisition Value in a Mandatory Tender Offer 384
+** Maximum and Minimum Exchange Ratios in Mergers 386
+** Exchange Ratio and Third-Party Protection 389
+* Value in Corporate Control
 * TODO Rights Issue
 ** Definitions
 *** Subscription Offer = Preemptive Rights granted to existing shareholders to buy stock  in order to raise  money :Definition:
