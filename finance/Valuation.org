@@ -8,7 +8,7 @@
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" type="text/css" href="../org/theme/styles.css" />
 #+HTML_HEAD_EXTRA: <script type="text/javascript" src="../org/theme/index.js" />
 #+OPTIONS: num:nil
- 
+#+OPTIONS: \n:t
 * IN-PROGRESS Restating Financial Statements
 ** Definitions 
 *** Accounting
@@ -268,8 +268,15 @@ We should be consistet in which time period to choose in calculated, and then ap
     However, realistically W_{acq} is probably different for each firm due to difference in market plan/strategy. 
     W_{acq}y < P < W_{acq}xi
 ** Benefits arising from acquisitions
-   
-* TODO Rights Issuei
+** Estimate adjusting stand-alone cash flows 
+*** Cutting fixed costs
+*** Estimating breakup costs
+Break-up value = Company's assets - Charge for realizing breakup
+*** Endemic: Exploiting commercial network
+** Premiums and Discounts
+** Most common Premiums and Discounts
+
+* TODO Rights Issue
 ** Definitions
 *** Subscription Offer = Preemptive Rights granted to existing shareholders to buy stock  in order to raise  money :Definition:
 *** TERP = Theoretical Ex-Right Price
