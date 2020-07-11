@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-07-07 Tue 05:33 -->
+<!-- 2020-07-11 Sat 23:10 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Valuation of Firms</title>
@@ -249,154 +249,164 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orged66a13"><span class="todo IN_PROGRESS">IN-PROGRESS</span> Restating Financial Statements</a>
+<li><a href="#org36ccda4"><span class="todo IN_PROGRESS">IN-PROGRESS</span> Restating Financial Statements</a>
 <ul>
-<li><a href="#org28f6967">Definitions</a>
+<li><a href="#org33bf724">Definitions</a>
 <ul>
-<li><a href="#orga873b5c">Accounting</a></li>
-<li><a href="#org8ee4715">Corporate Finance</a></li>
-<li><a href="#orgb1ab8bd">Basic Principles</a></li>
+<li><a href="#org636ccc9">Accounting</a></li>
+<li><a href="#org7497149">Corporate Finance</a></li>
+<li><a href="#orgb17c457">Basic Principles</a></li>
 </ul>
 </li>
-<li><a href="#orgff1f6af">Calculating Investment(IC = "Investment Capital")</a>
+<li><a href="#orgebb2488">Calculating Investment(IC = "Investment Capital")</a>
 <ul>
-<li><a href="#org987ddea">Theory</a></li>
+<li><a href="#org53eedab">Theory</a></li>
 </ul>
 </li>
-<li><a href="#org6f8dbd4">Calculating Return(NOPLAT = "Net Operating Profit Less Adjusted Taxes")</a>
+<li><a href="#org6eafcd0">Calculating Return(NOPLAT = "Net Operating Profit Less Adjusted Taxes")</a>
 <ul>
-<li><a href="#org3e92fd7">Theory</a></li>
-<li><a href="#org12a63ee">Procedure</a></li>
-<li><a href="#org9b628bc">Calculations</a></li>
+<li><a href="#org907acc8">Theory</a></li>
+<li><a href="#orgd0a6905">Procedure</a></li>
+<li><a href="#orgcd2c7d0">Calculations</a></li>
 </ul>
 </li>
-<li><a href="#orgcc651b8">Calculating Cashflow(FCF = "Free Cash Flow")</a></li>
+<li><a href="#org3f3e7fa">Calculating Cashflow(FCF = "Free Cash Flow")</a></li>
 </ul>
 </li>
-<li><a href="#orgfa8a068"><span class="todo TODO">TODO</span> Estimating Cost of Capital</a>
+<li><a href="#orgda3a2e5"><span class="todo TODO">TODO</span> Estimating Cost of Capital</a>
 <ul>
-<li><a href="#org488612d">Definitions</a>
+<li><a href="#org552e843">Definitions</a>
 <ul>
-<li><a href="#orgad5e3a3">K<sub>eu</sub>: unlevered cost of equity</a></li>
-<li><a href="#org869251e">K<sub>d</sub>: levered cost of equity</a></li>
-<li><a href="#orgb24e5c6">WACC = (D/V)*K<sub>d</sub>*(1 - T) + (E/V)*k<sub>e</sub></a></li>
+<li><a href="#orga3aee3c">K<sub>eu</sub>: unlevered cost of equity</a></li>
+<li><a href="#orgfe6c29e">K<sub>d</sub>: levered cost of equity</a></li>
+<li><a href="#org64ad11b">WACC = (D/V)*K<sub>d</sub>*(1 - T) + (E/V)*k<sub>e</sub></a></li>
 </ul>
 </li>
-<li><a href="#org64aa9d2">Estimated unlevered cost of equity</a>
+<li><a href="#org6b9d191">Estimated unlevered cost of equity</a>
 <ul>
-<li><a href="#org37ded78">CAPM</a></li>
+<li><a href="#orge265fb7">CAPM</a></li>
 </ul>
 </li>
-<li><a href="#org87622ec">Estimating cost of debt</a></li>
+<li><a href="#org8a266e2">Estimating cost of debt</a></li>
 </ul>
 </li>
-<li><a href="#org16d23b0"><span class="todo TODO">TODO</span> Steady State Model</a></li>
-<li><a href="#org28d5b8d"><span class="todo TODO">TODO</span> Terminal Value</a></li>
-<li><a href="#orgaf3f428"><span class="todo TODO">TODO</span> Multiples</a>
+<li><a href="#org6110727"><span class="todo TODO">TODO</span> Steady State Model</a></li>
+<li><a href="#orgfb17975"><span class="todo TODO">TODO</span> Terminal Value</a></li>
+<li><a href="#orgb428f3e"><span class="todo TODO">TODO</span> Multiples</a>
 <ul>
-<li><a href="#org71d30f4">Theory</a>
+<li><a href="#orgae6382a">Theory</a>
 <ul>
-<li><a href="#org55bb2a1">Assumptions</a></li>
-<li><a href="#org2b4a046">Concept</a></li>
-<li><a href="#org28252d6">Common multiples</a></li>
+<li><a href="#org7718bd2">Assumptions</a></li>
+<li><a href="#org100317e">Concept</a></li>
+<li><a href="#org160aa92">Common multiples</a></li>
 </ul>
 </li>
-<li><a href="#orgc6354b7">P/E</a>
+<li><a href="#orge5f1cbb">P/E</a>
 <ul>
-<li><a href="#org8a92be7">Steady state</a></li>
-<li><a href="#org160e667">Growth</a></li>
+<li><a href="#org19c7d49">Steady state</a></li>
+<li><a href="#org96c41b6">Growth</a></li>
 </ul>
 </li>
-<li><a href="#org467702b">EV/EBIT &amp; EV/EBITDA</a>
+<li><a href="#org528777d">EV/EBIT &amp; EV/EBITDA</a>
 <ul>
-<li><a href="#orge94af4d">Steady state</a></li>
-<li><a href="#orgfac0a59">Growth</a></li>
+<li><a href="#orgd372e0e">Steady state</a></li>
+<li><a href="#org534f2f8">Growth</a></li>
 </ul>
 </li>
-<li><a href="#orgc66d3c3">Other Multiples</a></li>
-<li><a href="#org34727e0">Leverage</a></li>
-<li><a href="#org86dd8db">Unlevered Multiples</a></li>
-<li><a href="#org21d562f">Multiples and Growth</a></li>
-<li><a href="#org8a1cad3">PEG Ratio</a></li>
-<li><a href="#org28c9e61">Value Maps</a></li>
+<li><a href="#org9c236b1">Other Multiples</a></li>
+<li><a href="#org2068712">Leverage</a></li>
+<li><a href="#orgc70e000">Unlevered Multiples</a></li>
+<li><a href="#org4ec86f4">Multiples and Growth</a></li>
+<li><a href="#org700b532">PEG Ratio</a></li>
+<li><a href="#orgca10c8d">Value Maps</a></li>
 </ul>
 </li>
-<li><a href="#org4da8171"><span class="todo IN_PROGRESS">IN-PROGRESS</span> Acquisition Value</a>
+<li><a href="#org5fafb32"><span class="todo IN_PROGRESS">IN-PROGRESS</span> Acquisition Value</a>
 <ul>
-<li><a href="#org81943dd">Definitions</a>
+<li><a href="#orgf049f4d">Definitions</a>
 <ul>
-<li><a href="#orga48dd3b">Acquisition Value = Standalone Value + Merger Synergies&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Definition">Definition</span></span></a></li>
-<li><a href="#org4eb7f7d">Fair Market Value = based on operation company + Merger synergies in group of buyers&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Definition">Definition</span></span></a></li>
+<li><a href="#orgde96490">Acquisition Value = Standalone Value + Merger Synergies&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Definition">Definition</span></span></a></li>
+<li><a href="#org4680ad2">Fair Market Value = based on operation company + Merger synergies in group of buyers&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Definition">Definition</span></span></a></li>
 </ul>
 </li>
-<li><a href="#org6d63b6d">Value Created by an Acquisition</a>
+<li><a href="#org7640eb7">Value Created by an Acquisition</a>
 <ul>
-<li><a href="#org3571465">Differential approach</a></li>
-<li><a href="#orgb053e90">Benifits</a></li>
+<li><a href="#org2db4a5a">Differential approach</a></li>
+<li><a href="#org6485fa4">Benefits</a></li>
 </ul>
 </li>
-<li><a href="#org8035a7e">Value-Components Model</a>
+<li><a href="#orga517462">Value-Components Model</a>
 <ul>
-<li><a href="#orgd533c75">Model</a></li>
-<li><a href="#org075af16">Application</a></li>
+<li><a href="#orgcc11e6a">Model</a></li>
+<li><a href="#orgf068953">Application</a></li>
 </ul>
 </li>
-<li><a href="#org26c9d7b">Further Considerations in Valuing Acquisitions</a>
+<li><a href="#org9c8e6f7">Further Considerations in Valuing Acquisitions</a>
 <ul>
-<li><a href="#orgdc25c17">Analysis Standpoint</a></li>
-<li><a href="#orgb9ce123">Estimation of Cash flow</a></li>
-<li><a href="#org6fe1de6">Time Horizon</a></li>
-<li><a href="#org704cb08">Debit profile</a></li>
-<li><a href="#orgcf092fb">Asset-Side versus Equity-Side</a></li>
+<li><a href="#orgb4622fe">Analysis Standpoint</a></li>
+<li><a href="#org5bd9350">Estimation of Cash flow</a></li>
+<li><a href="#org51c71fc">Time Horizon</a></li>
+<li><a href="#orgdb47f2d">Debit profile</a></li>
+<li><a href="#orgbbfad23">Asset-Side versus Equity-Side</a></li>
 </ul>
 </li>
-<li><a href="#org9d7f8a1">Acquisition Value of Plastic Materials Co</a></li>
-<li><a href="#org76edb21">Acquisition Value of Controlling Interests</a></li>
-<li><a href="#org536bbce">Other Determinants of Control Premium</a></li>
-<li><a href="#org603b1a2">Acquisition Value in a Mandatory Tender Offer 384</a></li>
-<li><a href="#org482a817">Maximum and Minimum Exchange Ratios in Mergers 386</a></li>
-<li><a href="#orgc6d51d0">Exchange Ratio and Third-Party Protection 389</a></li>
+<li><a href="#orgca81100">Acquisition Value of Plastic Materials Co</a></li>
+<li><a href="#org65cb2f2">Acquisition Value of Controlling Interests</a></li>
+<li><a href="#org576b925">Other Determinants of Control Premium</a></li>
+<li><a href="#org99bf559">Acquisition Value in a Mandatory Tender Offer 384</a></li>
+<li><a href="#org528318f">Maximum and Minimum Exchange Ratios in Mergers 386</a></li>
+<li><a href="#orgfb2e86a">Exchange Ratio and Third-Party Protection 389</a></li>
 </ul>
 </li>
-<li><a href="#org40d3924">Value in Corporate Control</a></li>
-<li><a href="#org0ee8e7b"><span class="todo TODO">TODO</span> Rights Issue</a>
+<li><a href="#org8e5f78b"><span class="todo TODO">TODO</span> Value in Corporate Control</a>
 <ul>
-<li><a href="#org99b795b">Definitions</a>
+<li><a href="#orge0435ea">Price Formation</a>
 <ul>
-<li><a href="#orgecf521a">Subscription Offer = Preemptive Rights granted to existing shareholders to buy stock  in order to raise  money&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Definition">Definition</span></span></a></li>
-<li><a href="#orgea6a187">TERP = Theoretical Ex-Right Price</a></li>
+<li><a href="#org5bfb35f">Competitive Market</a></li>
+<li><a href="#orge8b6671">Mechanism of Price formation</a></li>
 </ul>
 </li>
-<li><a href="#org723fd11">Setting subscription price</a></li>
-<li><a href="#org762aa39">Valuing Preemptive rights</a></li>
+<li><a href="#org2db25af">Benefits arising from acquisitions</a></li>
 </ul>
 </li>
-<li><a href="#org063d385"><span class="done DONE">DONE</span> Carbon</a>
+<li><a href="#orge6165d0"><span class="todo TODO">TODO</span> Rights Issuei</a>
 <ul>
-<li><a href="#org8164356">Definitions</a></li>
-<li><a href="#org3d25703">Carbon Risk</a>
+<li><a href="#org494bce0">Definitions</a>
 <ul>
-<li><a href="#org170fea9"><b>Policy and Legal</b>: Policies or regulations that could impact the operational and financial viability of carbon assets i.e. fuel efficiency standards</a></li>
-<li><a href="#org0d925f2"><b>Technology</b>: Developments in the commercial availability and cost of alternative and low-carbon technologies i.e. energy storage, alternative fuels etc.</a></li>
-<li><a href="#org5dd8290"><b>Market and Economic</b>: Changes in market or economic conditions that would negatively impact carbon assets i.e. changes in fossil fuel prices or consumer preferences</a></li>
+<li><a href="#orgd23ab57">Subscription Offer = Preemptive Rights granted to existing shareholders to buy stock  in order to raise  money&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Definition">Definition</span></span></a></li>
+<li><a href="#orgf40863a">TERP = Theoretical Ex-Right Price</a></li>
 </ul>
 </li>
-<li><a href="#orgb5448bf">Carbon Pricing</a>
-<ul>
-<li><a href="#orgc3d37c5">Approaches</a></li>
-<li><a href="#orgf3ec4cf">External/Internal Carbon prices</a></li>
+<li><a href="#orgef01ed9">Setting subscription price</a></li>
+<li><a href="#org5f272a9">Valuing Preemptive rights</a></li>
 </ul>
 </li>
-<li><a href="#org3ea6d03">Valuation with Carbon risk</a>
+<li><a href="#orgf967155"><span class="done DONE">DONE</span> Carbon</a>
 <ul>
-<li><a href="#orgb67380a">Scenario-Based Valuation and Carbon</a></li>
-<li><a href="#org0e9d046">Stochastic Simulation Valuation and Carbon</a></li>
+<li><a href="#org26aff1b">Definitions</a></li>
+<li><a href="#org216f1b0">Carbon Risk</a>
+<ul>
+<li><a href="#org376524f"><b>Policy and Legal</b>: Policies or regulations that could impact the operational and financial viability of carbon assets i.e. fuel efficiency standards</a></li>
+<li><a href="#orge7b332f"><b>Technology</b>: Developments in the commercial availability and cost of alternative and low-carbon technologies i.e. energy storage, alternative fuels etc.</a></li>
+<li><a href="#orge11fa84"><b>Market and Economic</b>: Changes in market or economic conditions that would negatively impact carbon assets i.e. changes in fossil fuel prices or consumer preferences</a></li>
 </ul>
 </li>
-<li><a href="#orgb1b7f1f">Carbon Beta</a>
+<li><a href="#orgedc140e">Carbon Pricing</a>
 <ul>
-<li><a href="#orgd401fc2">Theory</a></li>
-<li><a href="#org89844df">Application</a></li>
+<li><a href="#orgdfa7c2c">Approaches</a></li>
+<li><a href="#orgdf18eb4">External/Internal Carbon prices</a></li>
+</ul>
+</li>
+<li><a href="#org83c6d0b">Valuation with Carbon risk</a>
+<ul>
+<li><a href="#org3d84e6c">Scenario-Based Valuation and Carbon</a></li>
+<li><a href="#org09a345c">Stochastic Simulation Valuation and Carbon</a></li>
+</ul>
+</li>
+<li><a href="#org007d996">Carbon Beta</a>
+<ul>
+<li><a href="#org2906822">Theory</a></li>
+<li><a href="#org8927deb">Application</a></li>
 </ul>
 </li>
 </ul>
@@ -405,94 +415,94 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orged66a13" class="outline-2">
-<h2 id="orged66a13"><span class="todo IN_PROGRESS">IN-PROGRESS</span> Restating Financial Statements</h2>
-<div class="outline-text-2" id="text-orged66a13">
+<div id="outline-container-org36ccda4" class="outline-2">
+<h2 id="org36ccda4"><span class="todo IN_PROGRESS">IN-PROGRESS</span> Restating Financial Statements</h2>
+<div class="outline-text-2" id="text-org36ccda4">
 </div>
-<div id="outline-container-org28f6967" class="outline-3">
-<h3 id="org28f6967">Definitions</h3>
-<div class="outline-text-3" id="text-org28f6967">
+<div id="outline-container-org33bf724" class="outline-3">
+<h3 id="org33bf724">Definitions</h3>
+<div class="outline-text-3" id="text-org33bf724">
 </div>
-<div id="outline-container-orga873b5c" class="outline-4">
-<h4 id="orga873b5c">Accounting</h4>
-<div class="outline-text-4" id="text-orga873b5c">
+<div id="outline-container-org636ccc9" class="outline-4">
+<h4 id="org636ccc9">Accounting</h4>
+<div class="outline-text-4" id="text-org636ccc9">
 </div>
 <ul class="org-ul">
-<li><a id="org5327347"></a>ASSETS = LIABILITIES + EQUITY<br />
+<li><a id="orgfe0d9bd"></a>ASSETS = LIABILITIES + EQUITY<br />
 <ul class="org-ul">
-<li><a id="org7297b0c"></a>Operating Assets = Operating Liabilities + LT Debt + Equity<br /></li>
+<li><a id="orge081a6f"></a>Operating Assets = Operating Liabilities + LT Debt + Equity<br /></li>
 </ul>
 </li>
-<li><a id="org9b21d14"></a>WORKING CAPITAL: The categories related to the cycle of business operations i.e. inventory, accounts receivable, and accounts payable.<br /></li>
-<li><a id="org741e6bb"></a><br /></li>
+<li><a id="org6ccc0a8"></a>WORKING CAPITAL: The categories related to the cycle of business operations i.e. inventory, accounts receivable, and accounts payable.<br /></li>
+<li><a id="org17433ac"></a><br /></li>
 </ul>
 </div>
-<div id="outline-container-org8ee4715" class="outline-4">
-<h4 id="org8ee4715">Corporate Finance</h4>
-<div class="outline-text-4" id="text-org8ee4715">
+<div id="outline-container-org7497149" class="outline-4">
+<h4 id="org7497149">Corporate Finance</h4>
+<div class="outline-text-4" id="text-org7497149">
 </div>
 <ul class="org-ul">
-<li><a id="orgb649328"></a>RETURN = PROFIT/INVESTMENT<br /></li>
-<li><a id="orgee4c258"></a>FCF = NOPLAT − Net Increase in Invested Capital<br /></li>
+<li><a id="org9928073"></a>RETURN = PROFIT/INVESTMENT<br /></li>
+<li><a id="org384caec"></a>FCF = NOPLAT − Net Increase in Invested Capital<br /></li>
 </ul>
 </div>
-<div id="outline-container-orgb1ab8bd" class="outline-4">
-<h4 id="orgb1ab8bd">Basic Principles</h4>
-<div class="outline-text-4" id="text-orgb1ab8bd">
+<div id="outline-container-orgb17c457" class="outline-4">
+<h4 id="orgb17c457">Basic Principles</h4>
+<div class="outline-text-4" id="text-orgb17c457">
 </div>
 <ul class="org-ul">
-<li><a id="orgb24043f"></a>Logic of differentiation between operating/financial parts of company during valuation<br /></li>
-<li><a id="orge015477"></a>Need for reorganization of financial statements<br /></li>
+<li><a id="orgea5ab01"></a>Logic of differentiation between operating/financial parts of company during valuation<br /></li>
+<li><a id="orgd92a888"></a>Need for reorganization of financial statements<br /></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgff1f6af" class="outline-3">
-<h3 id="orgff1f6af">Calculating Investment(IC = "Investment Capital")</h3>
-<div class="outline-text-3" id="text-orgff1f6af">
+<div id="outline-container-orgebb2488" class="outline-3">
+<h3 id="orgebb2488">Calculating Investment(IC = "Investment Capital")</h3>
+<div class="outline-text-3" id="text-orgebb2488">
 </div>
-<div id="outline-container-org987ddea" class="outline-4">
-<h4 id="org987ddea">Theory</h4>
-<div class="outline-text-4" id="text-org987ddea">
+<div id="outline-container-org53eedab" class="outline-4">
+<h4 id="org53eedab">Theory</h4>
+<div class="outline-text-4" id="text-org53eedab">
 </div>
 <ul class="org-ul">
-<li><a id="orgbbd9205"></a>Invested Capital = LT Debt + Equity = Operating Assets − Operating Liabilities<br /></li>
-<li><a id="org5fecd82"></a>Total Funds Invested = Invested Capital + Non Operating Assets<br /></li>
+<li><a id="org9a77c03"></a>Invested Capital = LT Debt + Equity = Operating Assets − Operating Liabilities<br /></li>
+<li><a id="org6fb0fcf"></a>Total Funds Invested = Invested Capital + Non Operating Assets<br /></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org6f8dbd4" class="outline-3">
-<h3 id="org6f8dbd4">Calculating Return(NOPLAT = "Net Operating Profit Less Adjusted Taxes")</h3>
-<div class="outline-text-3" id="text-org6f8dbd4">
+<div id="outline-container-org6eafcd0" class="outline-3">
+<h3 id="org6eafcd0">Calculating Return(NOPLAT = "Net Operating Profit Less Adjusted Taxes")</h3>
+<div class="outline-text-3" id="text-org6eafcd0">
 </div>
-<div id="outline-container-org3e92fd7" class="outline-4">
-<h4 id="org3e92fd7">Theory</h4>
-<div class="outline-text-4" id="text-org3e92fd7">
+<div id="outline-container-org907acc8" class="outline-4">
+<h4 id="org907acc8">Theory</h4>
+<div class="outline-text-4" id="text-org907acc8">
 </div>
 <ul class="org-ul">
-<li><a id="orge376506"></a>NOPLAT is operating profit available to both debt/equity holders.<br /></li>
+<li><a id="org6438a04"></a>NOPLAT is operating profit available to both debt/equity holders.<br /></li>
 </ul>
 </div>
-<div id="outline-container-org12a63ee" class="outline-4">
-<h4 id="org12a63ee">Procedure</h4>
-<div class="outline-text-4" id="text-org12a63ee">
+<div id="outline-container-orgd0a6905" class="outline-4">
+<h4 id="orgd0a6905">Procedure</h4>
+<div class="outline-text-4" id="text-orgd0a6905">
 </div>
 <ul class="org-ul">
-<li><a id="orgda57762"></a>First, interest is not subtracted from operating profit, because interest is considered a payment to the company’s financial investors, not an operating expense<br /></li>
-<li><a id="org4976c79"></a>Second, exclude any nonoperating income generated from assets that were excluded from invested capital<br /></li>
-<li><a id="org609ad16"></a>Thirdly, to calculate operating taxes, start with reported taxes, add back the tax shield caused by interest expense, and remove the taxes paid on nonoperating income.<br /></li>
+<li><a id="org8723764"></a>First, interest is not subtracted from operating profit, because interest is considered a payment to the company’s financial investors, not an operating expense<br /></li>
+<li><a id="org735acd0"></a>Second, exclude any nonoperating income generated from assets that were excluded from invested capital<br /></li>
+<li><a id="orge6b0cff"></a>Thirdly, to calculate operating taxes, start with reported taxes, add back the tax shield caused by interest expense, and remove the taxes paid on nonoperating income.<br /></li>
 </ul>
 </div>
-<div id="outline-container-org9b628bc" class="outline-4">
-<h4 id="org9b628bc">Calculations</h4>
-<div class="outline-text-4" id="text-org9b628bc">
+<div id="outline-container-orgcd2c7d0" class="outline-4">
+<h4 id="orgcd2c7d0">Calculations</h4>
+<div class="outline-text-4" id="text-orgcd2c7d0">
 </div>
 <ul class="org-ul">
-<li><a id="org2cb77f4"></a>Original Financial Statememnts<br />
+<li><a id="org62c8285"></a>Original Financial Statememnts<br />
 <ul class="org-ul">
-<li><a id="org90c4114"></a>Sales(CampariOperatingSalesStatement)<br />
-<div class="outline-text-6" id="text-org90c4114">
-<table id="orgd8801fa" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<li><a id="org470179d"></a>Sales(CampariOperatingSalesStatement)<br />
+<div class="outline-text-6" id="text-org470179d">
+<table id="orge502dfd" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -525,9 +535,9 @@ for the JavaScript code in this tag.
 </table>
 </div>
 </li>
-<li><a id="org50fdf06"></a>Cost(CampariOperatingCostStatement)<br />
-<div class="outline-text-6" id="text-org50fdf06">
-<table id="orgc09ad08" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<li><a id="org7b9f520"></a>Cost(CampariOperatingCostStatement)<br />
+<div class="outline-text-6" id="text-org7b9f520">
+<table id="orgfc2eb0c" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -580,9 +590,9 @@ for the JavaScript code in this tag.
 </div>
 </li>
 
-<li><a id="org1f55ab8"></a>Non Operating Income(CampariNonOperatingRevenueCostStatement)<br />
-<div class="outline-text-6" id="text-org1f55ab8">
-<table id="orgaa03357" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<li><a id="org4fd8739"></a>Non Operating Income(CampariNonOperatingRevenueCostStatement)<br />
+<div class="outline-text-6" id="text-org4fd8739">
+<table id="org28c060c" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -656,9 +666,9 @@ for the JavaScript code in this tag.
 </div>
 </li>
 
-<li><a id="org8eb09e3"></a>Income Statement(CampariIncomeStatement)<br />
-<div class="outline-text-6" id="text-org8eb09e3">
-<table id="orgc5fafb7" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<li><a id="org4622cf8"></a>Income Statement(CampariIncomeStatement)<br />
+<div class="outline-text-6" id="text-org4622cf8">
+<table id="orgd2b7aff" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -728,9 +738,9 @@ for the JavaScript code in this tag.
 </div>
 </li>
 
-<li><a id="orgc3c6c0f"></a>D&amp;A Opex<br />
-<div class="outline-text-6" id="text-orgc3c6c0f">
-<table id="org7156add" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<li><a id="orgf1ffa94"></a>D&amp;A Opex<br />
+<div class="outline-text-6" id="text-orgf1ffa94">
+<table id="org5af35a5" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -779,14 +789,14 @@ for the JavaScript code in this tag.
 </ul>
 </li>
 
-<li><a id="org84b8712"></a>Restated Financial Statements<br />
+<li><a id="org7617439"></a>Restated Financial Statements<br />
 <ul class="org-ul">
-<li><a id="orge0f251b"></a>Cost(CampariRestatedOperatingCostStatement)<br />
-<div class="outline-text-6" id="text-orge0f251b">
+<li><a id="org019e2a2"></a>Cost(CampariRestatedOperatingCostStatement)<br />
+<div class="outline-text-6" id="text-org019e2a2">
 <p>
 Important: <b>subtract</b> D&amp;A <b>expense</b>, so as to add it back.
 </p>
-<table id="org1d7bcd6" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="orgfb4211d" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -833,9 +843,9 @@ Important: <b>subtract</b> D&amp;A <b>expense</b>, so as to add it back.
 </div>
 </li>
 
-<li><a id="org04fbc06"></a>Income Statement(CampariRestatedIncomeStatement)<br />
-<div class="outline-text-6" id="text-org04fbc06">
-<table id="org189abb3" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<li><a id="org12c4998"></a>Income Statement(CampariRestatedIncomeStatement)<br />
+<div class="outline-text-6" id="text-org12c4998">
+<table id="orgb8a2092" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -924,56 +934,56 @@ Important: <b>subtract</b> D&amp;A <b>expense</b>, so as to add it back.
 </div>
 </div>
 
-<div id="outline-container-orgcc651b8" class="outline-3">
-<h3 id="orgcc651b8">Calculating Cashflow(FCF = "Free Cash Flow")</h3>
+<div id="outline-container-org3f3e7fa" class="outline-3">
+<h3 id="org3f3e7fa">Calculating Cashflow(FCF = "Free Cash Flow")</h3>
 </div>
 </div>
 
-<div id="outline-container-orgfa8a068" class="outline-2">
-<h2 id="orgfa8a068"><span class="todo TODO">TODO</span> Estimating Cost of Capital</h2>
-<div class="outline-text-2" id="text-orgfa8a068">
+<div id="outline-container-orgda3a2e5" class="outline-2">
+<h2 id="orgda3a2e5"><span class="todo TODO">TODO</span> Estimating Cost of Capital</h2>
+<div class="outline-text-2" id="text-orgda3a2e5">
 </div>
-<div id="outline-container-org488612d" class="outline-3">
-<h3 id="org488612d">Definitions</h3>
-<div class="outline-text-3" id="text-org488612d">
+<div id="outline-container-org552e843" class="outline-3">
+<h3 id="org552e843">Definitions</h3>
+<div class="outline-text-3" id="text-org552e843">
 </div>
-<div id="outline-container-orgad5e3a3" class="outline-4">
-<h4 id="orgad5e3a3">K<sub>eu</sub>: unlevered cost of equity</h4>
-<div class="outline-text-4" id="text-orgad5e3a3">
+<div id="outline-container-orga3aee3c" class="outline-4">
+<h4 id="orga3aee3c">K<sub>eu</sub>: unlevered cost of equity</h4>
+<div class="outline-text-4" id="text-orga3aee3c">
 <p>
 Rate of return acceptable by equity investors in a completely unlevered firm. Reflects the risk profile associated with corporate assets ignoring capital structure.
 </p>
 </div>
 </div>
-<div id="outline-container-org869251e" class="outline-4">
-<h4 id="org869251e">K<sub>d</sub>: levered cost of equity</h4>
-<div class="outline-text-4" id="text-org869251e">
+<div id="outline-container-orgfe6c29e" class="outline-4">
+<h4 id="orgfe6c29e">K<sub>d</sub>: levered cost of equity</h4>
+<div class="outline-text-4" id="text-orgfe6c29e">
 <p>
 Rate of return acceptable by a form debt.
 </p>
 </div>
 </div>
-<div id="outline-container-orgb24e5c6" class="outline-4">
-<h4 id="orgb24e5c6">WACC = (D/V)*K<sub>d</sub>*(1 - T) + (E/V)*k<sub>e</sub></h4>
+<div id="outline-container-org64ad11b" class="outline-4">
+<h4 id="org64ad11b">WACC = (D/V)*K<sub>d</sub>*(1 - T) + (E/V)*k<sub>e</sub></h4>
 </div>
 </div>
-<div id="outline-container-org64aa9d2" class="outline-3">
-<h3 id="org64aa9d2">Estimated unlevered cost of equity</h3>
-<div class="outline-text-3" id="text-org64aa9d2">
+<div id="outline-container-org6b9d191" class="outline-3">
+<h3 id="org6b9d191">Estimated unlevered cost of equity</h3>
+<div class="outline-text-3" id="text-org6b9d191">
 </div>
-<div id="outline-container-org37ded78" class="outline-4">
-<h4 id="org37ded78">CAPM</h4>
-<div class="outline-text-4" id="text-org37ded78">
+<div id="outline-container-orge265fb7" class="outline-4">
+<h4 id="orge265fb7">CAPM</h4>
+<div class="outline-text-4" id="text-orge265fb7">
 <p>
 R<sub>i</sub> = r<sub>f</sub> + B<sub>i</sub>[R<sub>m</sub> - r<sub>f</sub>]
 Here,  Beta represents a stock’s incremental risk to a diversified investor, where risk is defined as the extent to which the stock covaries with the aggregate stock market. High beta means company must earn and offer higher return to entice investors.
 </p>
 </div>
 <ul class="org-ul">
-<li><a id="orgfa809fb"></a>Estimating Risk free rate r<sub>f</sub>: use zero coupon treasury bonds<br /></li>
-<li><a id="org60b3590"></a>Estimating Market risk premium: 5-6%<br /></li>
-<li><a id="orgd4555f0"></a>Estimating Beta<br />
-<div class="outline-text-5" id="text-orgd4555f0">
+<li><a id="orge7d9c37"></a>Estimating Risk free rate r<sub>f</sub>: use zero coupon treasury bonds<br /></li>
+<li><a id="orga5b62b7"></a>Estimating Market risk premium: 5-6%<br /></li>
+<li><a id="org7ab0d45"></a>Estimating Beta<br />
+<div class="outline-text-5" id="text-org7ab0d45">
 <p>
 Use industry beta, instead of company beta. To undo/normalise the effect of leverage use Modiligani and Miller.
 </p>
@@ -982,24 +992,24 @@ Use industry beta, instead of company beta. To undo/normalise the effect of leve
 </ul>
 </div>
 </div>
-<div id="outline-container-org87622ec" class="outline-3">
-<h3 id="org87622ec">Estimating cost of debt</h3>
-<div class="outline-text-3" id="text-org87622ec">
+<div id="outline-container-org8a266e2" class="outline-3">
+<h3 id="org8a266e2">Estimating cost of debt</h3>
+<div class="outline-text-3" id="text-org8a266e2">
 <p>
 After-Tax Cost of Debt = Cost of Debt × (1 − T<sub>m</sub>)
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org16d23b0" class="outline-2">
-<h2 id="org16d23b0"><span class="todo TODO">TODO</span> Steady State Model</h2>
+<div id="outline-container-org6110727" class="outline-2">
+<h2 id="org6110727"><span class="todo TODO">TODO</span> Steady State Model</h2>
 </div>
-<div id="outline-container-org28d5b8d" class="outline-2">
-<h2 id="org28d5b8d"><span class="todo TODO">TODO</span> Terminal Value</h2>
+<div id="outline-container-orgfb17975" class="outline-2">
+<h2 id="orgfb17975"><span class="todo TODO">TODO</span> Terminal Value</h2>
 </div>
-<div id="outline-container-orgaf3f428" class="outline-2">
-<h2 id="orgaf3f428"><span class="todo TODO">TODO</span> Multiples</h2>
-<div class="outline-text-2" id="text-orgaf3f428">
+<div id="outline-container-orgb428f3e" class="outline-2">
+<h2 id="orgb428f3e"><span class="todo TODO">TODO</span> Multiples</h2>
+<div class="outline-text-2" id="text-orgb428f3e">
 <p>
 The multiples method seeks to develop a relationship between the actual price of shares of comparable listed companies and an accounting metric (such as net income, cash flows, revenues, etc.)
 </p>
@@ -1037,30 +1047,30 @@ The multiples method seeks to develop a relationship between the actual price of
 </table>
 </div>
 
-<div id="outline-container-org71d30f4" class="outline-3">
-<h3 id="org71d30f4">Theory</h3>
-<div class="outline-text-3" id="text-org71d30f4">
+<div id="outline-container-orgae6382a" class="outline-3">
+<h3 id="orgae6382a">Theory</h3>
+<div class="outline-text-3" id="text-orgae6382a">
 </div>
-<div id="outline-container-org55bb2a1" class="outline-4">
-<h4 id="org55bb2a1">Assumptions</h4>
-<div class="outline-text-4" id="text-org55bb2a1">
+<div id="outline-container-org7718bd2" class="outline-4">
+<h4 id="org7718bd2">Assumptions</h4>
+<div class="outline-text-4" id="text-org7718bd2">
 </div>
 <ul class="org-ul">
-<li><a id="org9c382e5"></a>The company’s value changes proportionally to the internal variables chosen as a measure of performance;<br /></li>
-<li><a id="org5d2e441"></a>The growth rates of both cash flows and the risk level are constant<br /></li>
+<li><a id="org03517fd"></a>The company’s value changes proportionally to the internal variables chosen as a measure of performance;<br /></li>
+<li><a id="org5700e2f"></a>The growth rates of both cash flows and the risk level are constant<br /></li>
 </ul>
 </div>
-<div id="outline-container-org2b4a046" class="outline-4">
-<h4 id="org2b4a046">Concept</h4>
-<div class="outline-text-4" id="text-org2b4a046">
+<div id="outline-container-org100317e" class="outline-4">
+<h4 id="org100317e">Concept</h4>
+<div class="outline-text-4" id="text-org100317e">
 <ul class="org-ul">
 <li>The financial method creates cash flow projections based on estimations on cost of capital, and projection on growth rate.</li>
 <li>The multiples method avoids these estimations and takes the expected growth rate and risk appreciation directly from market data through the use of multiples.</li>
 </ul>
 </div>
 <ul class="org-ul">
-<li><a id="org7bbbe0b"></a>Stock and Deal Multiples<br />
-<div class="outline-text-5" id="text-org7bbbe0b">
+<li><a id="orgb8c9704"></a>Stock and Deal Multiples<br />
+<div class="outline-text-5" id="text-orgb8c9704">
 <p>
 Multiples can refer to values taken from two different market contexts:
 </p>
@@ -1073,36 +1083,36 @@ MARKET VALUE = STAND ALONE VALUE + PREMIUM
 </p>
 </div>
 </li>
-<li><a id="orgbfb91a6"></a>Financial and Business Multiples<br />
+<li><a id="org16dcc39"></a>Financial and Business Multiples<br />
 <ul class="org-ul">
-<li><a id="org8ef13ec"></a>Financial multiples identify the connection between a equity market price and some important measures such as cash flows, net income, or EBITDA<br /></li>
-<li><a id="org2908a03"></a>Business multiples link the equity market price to specific elements which are relevant for the business model typical of the sector the company(RPU for telecom i.e.)<br /></li>
+<li><a id="orge4d7639"></a>Financial multiples identify the connection between a equity market price and some important measures such as cash flows, net income, or EBITDA<br /></li>
+<li><a id="orgca59a3b"></a>Business multiples link the equity market price to specific elements which are relevant for the business model typical of the sector the company(RPU for telecom i.e.)<br /></li>
 </ul>
 </li>
 </ul>
 </div>
-<div id="outline-container-org28252d6" class="outline-4">
-<h4 id="org28252d6">Common multiples</h4>
-<div class="outline-text-4" id="text-org28252d6">
+<div id="outline-container-org160aa92" class="outline-4">
+<h4 id="org160aa92">Common multiples</h4>
+<div class="outline-text-4" id="text-org160aa92">
 </div>
 <ul class="org-ul">
-<li><a id="orgfde6833"></a>P or EV<br />
-<div class="outline-text-5" id="text-orgfde6833">
+<li><a id="orgd1603ef"></a>P or EV<br />
+<div class="outline-text-5" id="text-orgd1603ef">
 <p>
 P can be calculated by EV by subtracting market value of debt.
 </p>
 </div>
 </li>
-<li><a id="orgfa1583f"></a>Direct or Indirect<br />
-<div class="outline-text-5" id="text-orgfa1583f">
+<li><a id="org0c6a9de"></a>Direct or Indirect<br />
+<div class="outline-text-5" id="text-org0c6a9de">
 <ul class="org-ul">
 <li>Direct: Measure how much value company is generating P/E, or EV/EBITDA</li>
 <li>Indirect: Unable to measure this - P/BV, or EV/Sales</li>
 </ul>
 </div>
 </li>
-<li><a id="orgcf84053"></a>Current, Trailing, and Leading Multiples<br />
-<div class="outline-text-5" id="text-orgcf84053">
+<li><a id="org99cfa56"></a>Current, Trailing, and Leading Multiples<br />
+<div class="outline-text-5" id="text-org99cfa56">
 <ul class="org-ul">
 <li>Current: last available balance sheet</li>
 <li>Trailing: last 12m</li>
@@ -1142,77 +1152,77 @@ We should be consistet in which time period to choose in calculated, and then ap
 </div>
 </div>
 
-<div id="outline-container-orgc6354b7" class="outline-3">
-<h3 id="orgc6354b7">P/E</h3>
-<div class="outline-text-3" id="text-orgc6354b7">
+<div id="outline-container-orge5f1cbb" class="outline-3">
+<h3 id="orge5f1cbb">P/E</h3>
+<div class="outline-text-3" id="text-orge5f1cbb">
 </div>
-<div id="outline-container-org8a92be7" class="outline-4">
-<h4 id="org8a92be7">Steady state</h4>
+<div id="outline-container-org19c7d49" class="outline-4">
+<h4 id="org19c7d49">Steady state</h4>
 </div>
-<div id="outline-container-org160e667" class="outline-4">
-<h4 id="org160e667">Growth</h4>
-</div>
-</div>
-<div id="outline-container-org467702b" class="outline-3">
-<h3 id="org467702b">EV/EBIT &amp; EV/EBITDA</h3>
-<div class="outline-text-3" id="text-org467702b">
-</div>
-<div id="outline-container-orge94af4d" class="outline-4">
-<h4 id="orge94af4d">Steady state</h4>
-</div>
-<div id="outline-container-orgfac0a59" class="outline-4">
-<h4 id="orgfac0a59">Growth</h4>
+<div id="outline-container-org96c41b6" class="outline-4">
+<h4 id="org96c41b6">Growth</h4>
 </div>
 </div>
-<div id="outline-container-orgc66d3c3" class="outline-3">
-<h3 id="orgc66d3c3">Other Multiples</h3>
+<div id="outline-container-org528777d" class="outline-3">
+<h3 id="org528777d">EV/EBIT &amp; EV/EBITDA</h3>
+<div class="outline-text-3" id="text-org528777d">
 </div>
-<div id="outline-container-org34727e0" class="outline-3">
-<h3 id="org34727e0">Leverage</h3>
+<div id="outline-container-orgd372e0e" class="outline-4">
+<h4 id="orgd372e0e">Steady state</h4>
 </div>
-<div id="outline-container-org86dd8db" class="outline-3">
-<h3 id="org86dd8db">Unlevered Multiples</h3>
-</div>
-<div id="outline-container-org21d562f" class="outline-3">
-<h3 id="org21d562f">Multiples and Growth</h3>
-</div>
-<div id="outline-container-org8a1cad3" class="outline-3">
-<h3 id="org8a1cad3">PEG Ratio</h3>
-</div>
-<div id="outline-container-org28c9e61" class="outline-3">
-<h3 id="org28c9e61">Value Maps</h3>
+<div id="outline-container-org534f2f8" class="outline-4">
+<h4 id="org534f2f8">Growth</h4>
 </div>
 </div>
-<div id="outline-container-org4da8171" class="outline-2">
-<h2 id="org4da8171"><span class="todo IN_PROGRESS">IN-PROGRESS</span> Acquisition Value</h2>
-<div class="outline-text-2" id="text-org4da8171">
+<div id="outline-container-org9c236b1" class="outline-3">
+<h3 id="org9c236b1">Other Multiples</h3>
 </div>
-<div id="outline-container-org81943dd" class="outline-3">
-<h3 id="org81943dd">Definitions</h3>
-<div class="outline-text-3" id="text-org81943dd">
+<div id="outline-container-org2068712" class="outline-3">
+<h3 id="org2068712">Leverage</h3>
 </div>
-<div id="outline-container-orga48dd3b" class="outline-4">
-<h4 id="orga48dd3b">Acquisition Value = Standalone Value + Merger Synergies&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Definition">Definition</span></span></h4>
+<div id="outline-container-orgc70e000" class="outline-3">
+<h3 id="orgc70e000">Unlevered Multiples</h3>
 </div>
-<div id="outline-container-org4eb7f7d" class="outline-4">
-<h4 id="org4eb7f7d">Fair Market Value = based on operation company + Merger synergies in group of buyers&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Definition">Definition</span></span></h4>
+<div id="outline-container-org4ec86f4" class="outline-3">
+<h3 id="org4ec86f4">Multiples and Growth</h3>
+</div>
+<div id="outline-container-org700b532" class="outline-3">
+<h3 id="org700b532">PEG Ratio</h3>
+</div>
+<div id="outline-container-orgca10c8d" class="outline-3">
+<h3 id="orgca10c8d">Value Maps</h3>
 </div>
 </div>
-<div id="outline-container-org6d63b6d" class="outline-3">
-<h3 id="org6d63b6d">Value Created by an Acquisition</h3>
-<div class="outline-text-3" id="text-org6d63b6d">
+<div id="outline-container-org5fafb32" class="outline-2">
+<h2 id="org5fafb32"><span class="todo IN_PROGRESS">IN-PROGRESS</span> Acquisition Value</h2>
+<div class="outline-text-2" id="text-org5fafb32">
+</div>
+<div id="outline-container-orgf049f4d" class="outline-3">
+<h3 id="orgf049f4d">Definitions</h3>
+<div class="outline-text-3" id="text-orgf049f4d">
+</div>
+<div id="outline-container-orgde96490" class="outline-4">
+<h4 id="orgde96490">Acquisition Value = Standalone Value + Merger Synergies&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Definition">Definition</span></span></h4>
+</div>
+<div id="outline-container-org4680ad2" class="outline-4">
+<h4 id="org4680ad2">Fair Market Value = based on operation company + Merger synergies in group of buyers&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Definition">Definition</span></span></h4>
+</div>
+</div>
+<div id="outline-container-org7640eb7" class="outline-3">
+<h3 id="org7640eb7">Value Created by an Acquisition</h3>
+<div class="outline-text-3" id="text-org7640eb7">
 <p>
 NPV<sub>acq</sub> = W<sub>acq</sub> - P
 or the value created by and acquisition is equal to the PV of cashflows of acquired firm less the price paid for it.
 </p>
 </div>
-<div id="outline-container-org3571465" class="outline-4">
-<h4 id="org3571465">Differential approach</h4>
-<div class="outline-text-4" id="text-org3571465">
+<div id="outline-container-org2db4a5a" class="outline-4">
+<h4 id="org2db4a5a">Differential approach</h4>
+<div class="outline-text-4" id="text-org2db4a5a">
 </div>
 <ul class="org-ul">
-<li><a id="orgf23b084"></a>Effect on cash flow<br />
-<div class="outline-text-5" id="text-orgf23b084">
+<li><a id="org0be1f73"></a>Effect on cash flow<br />
+<div class="outline-text-5" id="text-org0be1f73">
 <ul class="org-ul">
 <li>Incremental flows due to collusive policies</li>
 <li>Incremental flows due to gains in operational efficiency</li>
@@ -1220,16 +1230,16 @@ or the value created by and acquisition is equal to the PV of cashflows of acqui
 </ul>
 </div>
 </li>
-<li><a id="org68a9fe9"></a>Effect on risk profile<br />
-<div class="outline-text-5" id="text-org68a9fe9">
+<li><a id="orgb200b37"></a>Effect on risk profile<br />
+<div class="outline-text-5" id="text-orgb200b37">
 <ul class="org-ul">
 <li>Positive effects: Leverage over suppliers/buyers</li>
 <li>Negative effects: in case of vertical integration</li>
 </ul>
 </div>
 </li>
-<li><a id="org7cf0641"></a>Effect on credit profile<br />
-<div class="outline-text-5" id="text-org7cf0641">
+<li><a id="org8360742"></a>Effect on credit profile<br />
+<div class="outline-text-5" id="text-org8360742">
 <ul class="org-ul">
 <li>If debts increases, so does EV due to tax shields.</li>
 </ul>
@@ -1237,9 +1247,9 @@ or the value created by and acquisition is equal to the PV of cashflows of acqui
 </li>
 </ul>
 </div>
-<div id="outline-container-orgb053e90" class="outline-4">
-<h4 id="orgb053e90">Benifits</h4>
-<div class="outline-text-4" id="text-orgb053e90">
+<div id="outline-container-org6485fa4" class="outline-4">
+<h4 id="org6485fa4">Benefits</h4>
+<div class="outline-text-4" id="text-org6485fa4">
 <p>
 W<sub>acq</sub> = W<sub>base</sub> + W<sub>s</sub> + W<sub>o</sub> where
 </p>
@@ -1251,135 +1261,165 @@ W<sub>acq</sub> = W<sub>base</sub> + W<sub>s</sub> + W<sub>o</sub> where
 </div>
 </div>
 </div>
-<div id="outline-container-org8035a7e" class="outline-3">
-<h3 id="org8035a7e">Value-Components Model</h3>
-<div class="outline-text-3" id="text-org8035a7e">
+<div id="outline-container-orga517462" class="outline-3">
+<h3 id="orga517462">Value-Components Model</h3>
+<div class="outline-text-3" id="text-orga517462">
 </div>
-<div id="outline-container-orgd533c75" class="outline-4">
-<h4 id="orgd533c75">Model</h4>
+<div id="outline-container-orgcc11e6a" class="outline-4">
+<h4 id="orgcc11e6a">Model</h4>
 </div>
-<div id="outline-container-org075af16" class="outline-4">
-<h4 id="org075af16">Application</h4>
-</div>
-</div>
-<div id="outline-container-org26c9d7b" class="outline-3">
-<h3 id="org26c9d7b">Further Considerations in Valuing Acquisitions</h3>
-<div class="outline-text-3" id="text-org26c9d7b">
-</div>
-<div id="outline-container-orgdc25c17" class="outline-4">
-<h4 id="orgdc25c17">Analysis Standpoint</h4>
-</div>
-<div id="outline-container-orgb9ce123" class="outline-4">
-<h4 id="orgb9ce123">Estimation of Cash flow</h4>
-</div>
-<div id="outline-container-org6fe1de6" class="outline-4">
-<h4 id="org6fe1de6">Time Horizon</h4>
-</div>
-<div id="outline-container-org704cb08" class="outline-4">
-<h4 id="org704cb08">Debit profile</h4>
-</div>
-<div id="outline-container-orgcf092fb" class="outline-4">
-<h4 id="orgcf092fb">Asset-Side versus Equity-Side</h4>
+<div id="outline-container-orgf068953" class="outline-4">
+<h4 id="orgf068953">Application</h4>
 </div>
 </div>
-<div id="outline-container-org9d7f8a1" class="outline-3">
-<h3 id="org9d7f8a1">Acquisition Value of Plastic Materials Co</h3>
+<div id="outline-container-org9c8e6f7" class="outline-3">
+<h3 id="org9c8e6f7">Further Considerations in Valuing Acquisitions</h3>
+<div class="outline-text-3" id="text-org9c8e6f7">
 </div>
-<div id="outline-container-org76edb21" class="outline-3">
-<h3 id="org76edb21">Acquisition Value of Controlling Interests</h3>
+<div id="outline-container-orgb4622fe" class="outline-4">
+<h4 id="orgb4622fe">Analysis Standpoint</h4>
+</div>
+<div id="outline-container-org5bd9350" class="outline-4">
+<h4 id="org5bd9350">Estimation of Cash flow</h4>
+</div>
+<div id="outline-container-org51c71fc" class="outline-4">
+<h4 id="org51c71fc">Time Horizon</h4>
+</div>
+<div id="outline-container-orgdb47f2d" class="outline-4">
+<h4 id="orgdb47f2d">Debit profile</h4>
+</div>
+<div id="outline-container-orgbbfad23" class="outline-4">
+<h4 id="orgbbfad23">Asset-Side versus Equity-Side</h4>
+</div>
+</div>
+<div id="outline-container-orgca81100" class="outline-3">
+<h3 id="orgca81100">Acquisition Value of Plastic Materials Co</h3>
+</div>
+<div id="outline-container-org65cb2f2" class="outline-3">
+<h3 id="org65cb2f2">Acquisition Value of Controlling Interests</h3>
 </div>
 
-<div id="outline-container-org536bbce" class="outline-3">
-<h3 id="org536bbce">Other Determinants of Control Premium</h3>
+<div id="outline-container-org576b925" class="outline-3">
+<h3 id="org576b925">Other Determinants of Control Premium</h3>
 </div>
-<div id="outline-container-org603b1a2" class="outline-3">
-<h3 id="org603b1a2">Acquisition Value in a Mandatory Tender Offer 384</h3>
+<div id="outline-container-org99bf559" class="outline-3">
+<h3 id="org99bf559">Acquisition Value in a Mandatory Tender Offer 384</h3>
 </div>
-<div id="outline-container-org482a817" class="outline-3">
-<h3 id="org482a817">Maximum and Minimum Exchange Ratios in Mergers 386</h3>
+<div id="outline-container-org528318f" class="outline-3">
+<h3 id="org528318f">Maximum and Minimum Exchange Ratios in Mergers 386</h3>
 </div>
-<div id="outline-container-orgc6d51d0" class="outline-3">
-<h3 id="orgc6d51d0">Exchange Ratio and Third-Party Protection 389</h3>
-</div>
-</div>
-<div id="outline-container-org40d3924" class="outline-2">
-<h2 id="org40d3924">Value in Corporate Control</h2>
-</div>
-<div id="outline-container-org0ee8e7b" class="outline-2">
-<h2 id="org0ee8e7b"><span class="todo TODO">TODO</span> Rights Issue</h2>
-<div class="outline-text-2" id="text-org0ee8e7b">
-</div>
-<div id="outline-container-org99b795b" class="outline-3">
-<h3 id="org99b795b">Definitions</h3>
-<div class="outline-text-3" id="text-org99b795b">
-</div>
-<div id="outline-container-orgecf521a" class="outline-4">
-<h4 id="orgecf521a">Subscription Offer = Preemptive Rights granted to existing shareholders to buy stock  in order to raise  money&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Definition">Definition</span></span></h4>
-</div>
-<div id="outline-container-orgea6a187" class="outline-4">
-<h4 id="orgea6a187">TERP = Theoretical Ex-Right Price</h4>
+<div id="outline-container-orgfb2e86a" class="outline-3">
+<h3 id="orgfb2e86a">Exchange Ratio and Third-Party Protection 389</h3>
 </div>
 </div>
-<div id="outline-container-org723fd11" class="outline-3">
-<h3 id="org723fd11">Setting subscription price</h3>
+<div id="outline-container-org8e5f78b" class="outline-2">
+<h2 id="org8e5f78b"><span class="todo TODO">TODO</span> Value in Corporate Control</h2>
+<div class="outline-text-2" id="text-org8e5f78b">
 </div>
-<div id="outline-container-org762aa39" class="outline-3">
-<h3 id="org762aa39">Valuing Preemptive rights</h3>
+<div id="outline-container-orge0435ea" class="outline-3">
+<h3 id="orge0435ea">Price Formation</h3>
+<div class="outline-text-3" id="text-orge0435ea">
 </div>
-</div>
-<div id="outline-container-org063d385" class="outline-2">
-<h2 id="org063d385"><span class="done DONE">DONE</span> Carbon</h2>
-<div class="outline-text-2" id="text-org063d385">
-</div>
-<div id="outline-container-org8164356" class="outline-3">
-<h3 id="org8164356">Definitions</h3>
-</div>
-<div id="outline-container-org3d25703" class="outline-3">
-<h3 id="org3d25703">Carbon Risk</h3>
-<div class="outline-text-3" id="text-org3d25703">
-</div>
-<div id="outline-container-org170fea9" class="outline-4">
-<h4 id="org170fea9"><b>Policy and Legal</b>: Policies or regulations that could impact the operational and financial viability of carbon assets i.e. fuel efficiency standards</h4>
-</div>
-<div id="outline-container-org0d925f2" class="outline-4">
-<h4 id="org0d925f2"><b>Technology</b>: Developments in the commercial availability and cost of alternative and low-carbon technologies i.e. energy storage, alternative fuels etc.</h4>
-</div>
-<div id="outline-container-org5dd8290" class="outline-4">
-<h4 id="org5dd8290"><b>Market and Economic</b>: Changes in market or economic conditions that would negatively impact carbon assets i.e. changes in fossil fuel prices or consumer preferences</h4>
+<div id="outline-container-org5bfb35f" class="outline-4">
+<h4 id="org5bfb35f">Competitive Market</h4>
+<div class="outline-text-4" id="text-org5bfb35f">
+<p>
+The market for acquisitions is not competitive if, on the other hand, a significant number of firms is not interested in external growth opportunities.
+</p>
 </div>
 </div>
-<div id="outline-container-orgb5448bf" class="outline-3">
-<h3 id="orgb5448bf">Carbon Pricing</h3>
-<div class="outline-text-3" id="text-orgb5448bf">
+<div id="outline-container-orge8b6671" class="outline-4">
+<h4 id="orge8b6671">Mechanism of Price formation</h4>
+<div class="outline-text-4" id="text-orge8b6671">
+<p>
+From microeconomic theory, at equilibrium estimate of value for target firm should be identical.
+P = W<sub>acq</sub>
+However, realistically W<sub>acq</sub> is probably different for each firm due to difference in market plan/strategy. 
+W<sub>acq</sub>y &lt; P &lt; W<sub>acq</sub>xi
+</p>
 </div>
-<div id="outline-container-orgc3d37c5" class="outline-4">
-<h4 id="orgc3d37c5">Approaches</h4>
-<div class="outline-text-4" id="text-orgc3d37c5">
+</div>
+</div>
+<div id="outline-container-org2db25af" class="outline-3">
+<h3 id="org2db25af">Benefits arising from acquisitions</h3>
+</div>
+</div>
+
+<div id="outline-container-orge6165d0" class="outline-2">
+<h2 id="orge6165d0"><span class="todo TODO">TODO</span> Rights Issuei</h2>
+<div class="outline-text-2" id="text-orge6165d0">
+</div>
+<div id="outline-container-org494bce0" class="outline-3">
+<h3 id="org494bce0">Definitions</h3>
+<div class="outline-text-3" id="text-org494bce0">
+</div>
+<div id="outline-container-orgd23ab57" class="outline-4">
+<h4 id="orgd23ab57">Subscription Offer = Preemptive Rights granted to existing shareholders to buy stock  in order to raise  money&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Definition">Definition</span></span></h4>
+</div>
+<div id="outline-container-orgf40863a" class="outline-4">
+<h4 id="orgf40863a">TERP = Theoretical Ex-Right Price</h4>
+</div>
+</div>
+<div id="outline-container-orgef01ed9" class="outline-3">
+<h3 id="orgef01ed9">Setting subscription price</h3>
+</div>
+<div id="outline-container-org5f272a9" class="outline-3">
+<h3 id="org5f272a9">Valuing Preemptive rights</h3>
+</div>
+</div>
+<div id="outline-container-orgf967155" class="outline-2">
+<h2 id="orgf967155"><span class="done DONE">DONE</span> Carbon</h2>
+<div class="outline-text-2" id="text-orgf967155">
+</div>
+<div id="outline-container-org26aff1b" class="outline-3">
+<h3 id="org26aff1b">Definitions</h3>
+</div>
+<div id="outline-container-org216f1b0" class="outline-3">
+<h3 id="org216f1b0">Carbon Risk</h3>
+<div class="outline-text-3" id="text-org216f1b0">
+</div>
+<div id="outline-container-org376524f" class="outline-4">
+<h4 id="org376524f"><b>Policy and Legal</b>: Policies or regulations that could impact the operational and financial viability of carbon assets i.e. fuel efficiency standards</h4>
+</div>
+<div id="outline-container-orge7b332f" class="outline-4">
+<h4 id="orge7b332f"><b>Technology</b>: Developments in the commercial availability and cost of alternative and low-carbon technologies i.e. energy storage, alternative fuels etc.</h4>
+</div>
+<div id="outline-container-orge11fa84" class="outline-4">
+<h4 id="orge11fa84"><b>Market and Economic</b>: Changes in market or economic conditions that would negatively impact carbon assets i.e. changes in fossil fuel prices or consumer preferences</h4>
+</div>
+</div>
+<div id="outline-container-orgedc140e" class="outline-3">
+<h3 id="orgedc140e">Carbon Pricing</h3>
+<div class="outline-text-3" id="text-orgedc140e">
+</div>
+<div id="outline-container-orgdfa7c2c" class="outline-4">
+<h4 id="orgdfa7c2c">Approaches</h4>
+<div class="outline-text-4" id="text-orgdfa7c2c">
 <p>
 The objective of carbon pricing is to shift the social costs of damage back to those who are responsible for them, and who can actually curb them.
 </p>
 </div>
 <ul class="org-ul">
-<li><a id="org13b9ab0"></a>Carbon taxes<br /></li>
-<li><a id="orgdd2be6a"></a>Emission trading systems(ETS)<br /></li>
+<li><a id="org92932c8"></a>Carbon taxes<br /></li>
+<li><a id="org3b56a69"></a>Emission trading systems(ETS)<br /></li>
 </ul>
 </div>
-<div id="outline-container-orgf3ec4cf" class="outline-4">
-<h4 id="orgf3ec4cf">External/Internal Carbon prices</h4>
-<div class="outline-text-4" id="text-orgf3ec4cf">
+<div id="outline-container-orgdf18eb4" class="outline-4">
+<h4 id="orgdf18eb4">External/Internal Carbon prices</h4>
+<div class="outline-text-4" id="text-orgdf18eb4">
 <p>
 For managing internal projects.
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org3ea6d03" class="outline-3">
-<h3 id="org3ea6d03">Valuation with Carbon risk</h3>
-<div class="outline-text-3" id="text-org3ea6d03">
+<div id="outline-container-org83c6d0b" class="outline-3">
+<h3 id="org83c6d0b">Valuation with Carbon risk</h3>
+<div class="outline-text-3" id="text-org83c6d0b">
 </div>
-<div id="outline-container-orgb67380a" class="outline-4">
-<h4 id="orgb67380a">Scenario-Based Valuation and Carbon</h4>
-<div class="outline-text-4" id="text-orgb67380a">
+<div id="outline-container-org3d84e6c" class="outline-4">
+<h4 id="org3d84e6c">Scenario-Based Valuation and Carbon</h4>
+<div class="outline-text-4" id="text-org3d84e6c">
 <p>
 Pick number of scenarios and drivers. Value them, and create probability for each.
 </p>
@@ -1429,37 +1469,37 @@ Pick number of scenarios and drivers. Value them, and create probability for eac
 </div>
 </div>
 
-<div id="outline-container-org0e9d046" class="outline-4">
-<h4 id="org0e9d046">Stochastic Simulation Valuation and Carbon</h4>
-<div class="outline-text-4" id="text-org0e9d046">
+<div id="outline-container-org09a345c" class="outline-4">
+<h4 id="org09a345c">Stochastic Simulation Valuation and Carbon</h4>
+<div class="outline-text-4" id="text-org09a345c">
 <p>
 Monte Carlo - Crystal Ball
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgb1b7f1f" class="outline-3">
-<h3 id="orgb1b7f1f">Carbon Beta</h3>
-<div class="outline-text-3" id="text-orgb1b7f1f">
+<div id="outline-container-org007d996" class="outline-3">
+<h3 id="org007d996">Carbon Beta</h3>
+<div class="outline-text-3" id="text-org007d996">
 </div>
-<div id="outline-container-orgd401fc2" class="outline-4">
-<h4 id="orgd401fc2">Theory</h4>
-<div class="outline-text-4" id="text-orgd401fc2">
+<div id="outline-container-org2906822" class="outline-4">
+<h4 id="org2906822">Theory</h4>
+<div class="outline-text-4" id="text-org2906822">
 <p>
 Alternative to CAPM, a multi factor model which's more appropriate for companies exposed to carbon risks.
 𝜇<sub>i</sub> =r<sub>f</sub> + 𝛽<sub>iM</sub>*(𝜇<sub>M</sub> - r<sub>f</sub>) + 𝛽<sub>iCO2</sub>*(𝜇<sub>CO2</sub> − r<sub>f</sub>)
 </p>
 </div>
 </div>
-<div id="outline-container-org89844df" class="outline-4">
-<h4 id="org89844df">Application</h4>
+<div id="outline-container-org8927deb" class="outline-4">
+<h4 id="org8927deb">Application</h4>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Abhishiv Saxena</p>
-<p class="date">Created: 2020-07-07 Tue 05:33</p>
+<p class="date">Created: 2020-07-11 Sat 23:10</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
