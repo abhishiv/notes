@@ -1,0 +1,17 @@
+#+TITLE: Abhishiv Saxena
+#+AUTHOR: Abhishiv Saxena<abhishiv@gmail.com>
+#+URL: https://abhishiv.netlify.app
+#+STARTUP: overview
+#+STARTUP: hideblocks
+#+PROPERTY: header-args :mkdirp yes :noweb yes
+#+TAGS:  Definition(d) Excercise(e)
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" type="text/css" href="../org/theme/styles.css" />
+#+HTML_HEAD_EXTRA: <script type="text/javascript" src="../org/theme/index.js" />
+#+OPTIONS: num:nil
+
+* Finance
+** [[./finance/Valuation][Corporate Valuation - DCF, APV, M&A]
+* Computer Science
+** Projectional Editing
+*** [[https://www.grati.co][grati.co - DSL Workbench]]
+**** [[https://www.grati.co/_docs][Developer documentation]]
