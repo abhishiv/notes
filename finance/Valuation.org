@@ -231,7 +231,7 @@ We should be consistet in which time period to choose in calculated, and then ap
 **** Value from Incremental cash flows resulting for merger synergies in target firm.
 **** Value of merger synergies obtained in other businesses led by controlling shareholders. 
 ** DONE Value Created by an Acquisition
-   CLOSED: [2020-07-12 Sun 01:31]
+   CLOSED: [2020-07-12 Sun 16:31]
    NPV_{acq} = W_{acq} - P
    or the value created by and acquisition is equal to the PV of cashflows of acquired firm less the price paid for it.
 *** Differential approach
@@ -255,14 +255,25 @@ We should be consistet in which time period to choose in calculated, and then ap
 *** Model
 *** Application
 ** Further Considerations in Valuing Acquisitions 
-*** Analysis Standpoint
-*** Estimation of Cash flow
-*** Time Horizon
-*** Debit profile
-*** Asset-Side versus Equity-Side
-** Acquisition Value of Plastic Materials Co
+*** DONE Analysis Standpoint
+    CLOSED: [2020-07-12 Sun 03:52]
+*** TODO Estimation of Cash flow
+*** TODO Time Horizon
+*** TODO Debit profile
+*** TODO Asset-Side versus Equity-Side
+** Acquisition Value of Plastic Materials Company
+*** Assumption
+*** Synergy Estimation
+*** Calculation
 ** Acquisition Value of Controlling Interests
-
+   Usually, the value of a controlling stake is higher than the value of shares they represent.
+   W = W_{Base Value} + W_{diff.flows}
+   Where, W_{diff.flows} can be divided into value from cash flows that are
+   - Divisible flows: Accuruing to target company and threfore available to all shareholders.
+   - Indivisible flows: Accuring only to controlling interest or companies controlled by them
+   Therefore the value for block of x shares is:
+   *W_{x} = (W_{base} + W_{div})*x + W_{indiv}*
+*** Private Benefits
 ** Other Determinants of Control Premium
 ** Acquisition Value in a Mandatory Tender Offer
 ** Maximum and Minimum Exchange Ratios in Mergers
