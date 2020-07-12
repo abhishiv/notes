@@ -10,7 +10,7 @@
 #+OPTIONS: num:nil
 
 * Finance
-** [[./finance/Valuation][Corporate Valuation - DCF, APV, M&A]
+** [[./finance/Valuation][Corporate Valuation - DCF, APV, M&A]]
 * Computer Science
 ** Projectional Editing
 *** [[https://www.grati.co][grati.co - DSL Workbench]]
