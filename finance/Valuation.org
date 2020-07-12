@@ -9,6 +9,7 @@
 #+HTML_HEAD_EXTRA: <script type="text/javascript" src="../org/theme/index.js" />
 #+OPTIONS: num:nil
 #+OPTIONS: \n:t
+#+HTML_LINK_HOME: /
 * IN-PROGRESS Restating Financial Statements
 ** Definitions 
 *** Accounting
