@@ -4,14 +4,12 @@
 #+STARTUP: overview
 #+STARTUP: hideblocks
 #+PROPERTY: header-args :mkdirp yes :noweb yes
-#+TAGS:  Definition(d) Excercise(e)
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" type="text/css" href="../org/theme/styles.css" />
 #+HTML_HEAD_EXTRA: <script type="text/javascript" src="../org/theme/index.js" />
 #+OPTIONS: num:nil
 #+OPTIONS: \n:t
 #+HTML_LINK_HOME: /
-* DONE Restating Financial Statements
-  CLOSED: [2020-07-13 Mon 09:03]
+* IN-PROGRESS Restating Financial Statements
 ** Definitions 
 *** Accounting
 **** ASSETS = LIABILITIES + EQUITY
@@ -334,3 +332,60 @@ Break-up value = Company's assets - Charge for realizing breakup
     Alternative to CAPM, a multi factor model which's more appropriate for companies exposed to carbon risks.
     𝜇_{i} =r_{f} + 𝛽_{iM}*(𝜇_{M} - r_{f}) + 𝛽_{iCO2}*(𝜇_{CO2} − r_{f})
 *** Application
+
+* Excercise 1
+** Problem 2                                                           :Beta:
+     Beta corporation is a utility company whose corporate tax rate is 33%. The reference free risk rate is equal to 3% and the expected market return is 9%. Using data on beta comparables and assuming kD = kTS and βD = 0 shown in the following table determine the kEU value of the company.
+
+| # | Accounts Payable | Mkt Capital | Short term D | Long term D |   Cash |  Beta |
+|---+------------------+-------------+--------------+-------------+--------+-------|
+| 1 |            876.0 |     16803.5 |       4564.0 |           0 | 1657.6 | 0.910 |
+| 2 |           1478.1 |     17396.4 |       4376.4 |      2527.0 |  714.0 | 1.320 |
+| 3 |            554.3 |     16790.2 |       6314.0 |      9695.0 |  213.5 | 1.500 |
+
+** Problem 3                                                             :EV:
+     Consider the following data of Beta at year 2011 and year 2012 together with the data of the previous exercise and assuming a steady state scenario, calculate:
+     - Beta‚ asset unlevered EV, levered EV and equity value with APV (assuming risk free debt and kTXA = kD)
+     - Beta‚ asset enterprise and equity value with DCF (assuming a D/E target ratio equal to 11% and kD equal to 3%)
+
+| Company Beta                |   2011 |   2012 |
+|-----------------------------+--------+--------|
+| EBIT                        | 4800.0 | 5340.0 |
+| Investment                  |  290.0 |  530.0 |
+| Divestitures                |      0 |  340.0 |
+| Account payables            |  410.0 |  380.0 |
+| Account receivable          |  180.0 |  250.0 |
+| Inventories                 |   75.0 |   80.0 |
+| Excess cash and equivalents |   32.0 |   92.0 |
+| Short term Financial debt   | 2560.0 | 2400.0 |
+| Long term Financial debt    | 1900.0 | 1780.0 |
+| Depreciation                |  140.0 |  150.0 |
+
+
+* Ex 2
+** Problem 1
+     On the basis of the information provided, and applying a tax rate = 30%, estimate:
+     - Industry average unlevered beta from the panel of comparable below and assuming kD = kTS and βD = 0
+     - Alpha’s enterprise value in 2012 using the Adjusted Present Value (APV) model and assuming rf =3.5% MRP = 5.0%, kTS = 3.5% and a growth rate g = 1.0% for the years after the explicit forecast period
+
+| Comparables | Levered beta | Conv. bonds | ST debt |    OL |  cash | Market cap | Tax % |
+|-------------+--------------+-------------+---------+-------+-------+------------+-------|
+| Company A   |          1.0 | -           |    60.0 |  40.0 |  20.0 |      160.0 | 30.0% |
+| Company B   |          1.2 | 800.0       |    80.0 | 200.0 | 100.0 |      600.0 | 25.0% |
+| Company C   |          0.8 | -           |   100.0 | 160.0 |     - |      400.0 | 30.0% |
+
+
+|                 | 2013    | 2014    | 2015    |
+|-----------------|---------|---------|---------|
+| Free cash flows | 200.0   | 210.0   | 218.0   |
+| Tax shields     |  20.0   |  22.0   |  24.0   |
+
+
+| Tax rate                                  |       30.0% |
+|-------------------------------------------+-------------|
+| rF                                        |        3.5% |
+| MRP                                       |        5.0% |
+| kTS = kD                                  |        3.5% |
+| Growth after the explicit forecast period |        1.0% |
+| Valuation date                            |        2012 |
+| Explicit period                           | 2013 - 2015 |
