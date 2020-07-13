@@ -10,7 +10,8 @@
 #+OPTIONS: num:nil
 #+OPTIONS: \n:t
 #+HTML_LINK_HOME: /
-* IN-PROGRESS Restating Financial Statements
+* DONE Restating Financial Statements
+  CLOSED: [2020-07-13 Mon 09:03]
 ** Definitions 
 *** Accounting
 **** ASSETS = LIABILITIES + EQUITY
@@ -220,18 +221,16 @@ We should be consistet in which time period to choose in calculated, and then ap
 ** Multiples and Growth
 ** PEG Ratio
 ** Value Maps
-* TODO Acquisition Value
-  DEADLINE: <2020-07-06 Tue 20:00-23:55>
-** DONE Definitions
-   CLOSED: [2020-07-12 Sun 01:16]
+* DONE Acquisition Value
+  CLOSED: [2020-07-13 Mon 09:03] DEADLINE: <2020-07-06 Tue 20:00-23:55>
+** Definitions
 *** Acquisition Value = Stand-alone Value + Merger synergies from the point of view of a buyer :Definition:
 *** Fair Market Value = based on operation company + Merger synergies in group of buyers  :Definition:
 *** Three components of Acquisition Value
 **** Stand-alone Value
 **** Value from Incremental cash flows resulting for merger synergies in target firm.
 **** Value of merger synergies obtained in other businesses led by controlling shareholders. 
-** DONE Value Created by an Acquisition
-   CLOSED: [2020-07-12 Sun 16:31]
+** Value Created by an Acquisition
    NPV_{acq} = W_{acq} - P
    or the value created by and acquisition is equal to the PV of cashflows of acquired firm less the price paid for it.
 *** Differential approach
@@ -296,7 +295,8 @@ Break-up value = Company's assets - Charge for realizing breakup
 ** Premiums and Discounts
 ** Most common Premiums and Discounts
 
-* TODO Rights Issue
+* DONE Rights Issue
+  CLOSED: [2020-07-13 Mon 09:03]
 ** Definitions
 *** Subscription Offer = Preemptive Rights granted to existing shareholders to buy stock  in order to raise  money :Definition:
 *** TERP = Theoretical Ex-Right Price
