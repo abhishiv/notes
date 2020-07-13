@@ -118,6 +118,7 @@
 |---------------------------+---------+---------|
 | *Total Cost*              | -1276.7 | -1321.3 |
 #+TBLFM: @2$2..@2$>=vsum(remote(CampariOperatingCostStatement,@2$$#), -1*remote(CampariDAOpex,@2$$#))::@3$2..@3$>=vsum(remote(CampariOperatingCostStatement,@3$$#), -1*remote(CampariDAOpex,@3$$#))::@4$2..@4$>=vsum(remote(CampariOperatingCostStatement,@4$$#), -1*remote(CampariDAOpex,@4$$#)::@5$2..@5$>=vsum(@I..@II)
+#+NAME: CampariRestatedOperatingCostStatement
 
 ***** Income Statement(CampariRestatedIncomeStatement)
 #+NAME: CampariRestatedIncomeStatement
@@ -335,13 +336,26 @@ Break-up value = Company's assets - Charge for realizing breakup
 
 * Excercise 1
 ** Problem 2                                                           :Beta:
-     Beta corporation is a utility company whose corporate tax rate is 33%. The reference free risk rate is equal to 3% and the expected market return is 9%. Using data on beta comparables and assuming kD = kTS and βD = 0 shown in the following table determine the kEU value of the company.
+     ACME corporation is a utility company whose corporate tax rate is 33%. The reference free risk rate is equal to 3% and the expected market return is 9%. Using data on beta comparables and assuming kD = kTS and βD = 0 shown in the following table determine the kEU value of the company.
 
+#+NAME: Ex1P2IndustryBetaTable
 | # | Accounts Payable | Mkt Capital | Short term D | Long term D |   Cash |  Beta |
 |---+------------------+-------------+--------------+-------------+--------+-------|
 | 1 |            876.0 |     16803.5 |       4564.0 |           0 | 1657.6 | 0.910 |
 | 2 |           1478.1 |     17396.4 |       4376.4 |      2527.0 |  714.0 | 1.320 |
 | 3 |            554.3 |     16790.2 |       6314.0 |      9695.0 |  213.5 | 1.500 |
+#+TBLFM:
+#+NAME: Ex1P2IndustryBetaCalculation
+| # | Net debt | leverage ratio | Unleverd Beta |
+|---+----------+----------------+---------------|
+| 1 |   2906.4 |      17.296397 |    0.81549559 |
+| 2 |   6189.4 |      35.578625 |     1.0659115 |
+| 0 |  15795.5 |      94.075711 |    0.92007196 |
+|---+----------+----------------+---------------|
+|   |          |                |    0.93382635 |
+#+TBLFM: @>$4=vmean(@I..II)::@2$2..@4$2=vsum(remote(Ex1P2IndustryBetaTable,@@#$4) + remote(Ex1P2IndustryBetaTable,@@#$5) - remote(Ex1P2IndustryBetaTable,@@#$6))::@2$3..@4$3=@@#$2 * 100 / remote(Ex1P2IndustryBetaTable,@@#$3)::@2$4..@4$4=remote(Ex1P2IndustryBetaTable,@@#$7) / (1 + (1 - 0.33 )* (@@#$3/100) )
+
+Therefore K_{eu} = r_{f} + ß*MRP = 0.03 + 0.93382635*0.06 
 
 ** Problem 3                                                             :EV:
      Consider the following data of Beta at year 2011 and year 2012 together with the data of the previous exercise and assuming a steady state scenario, calculate:
@@ -389,3 +403,10 @@ Break-up value = Company's assets - Charge for realizing breakup
 | Growth after the explicit forecast period |        1.0% |
 | Valuation date                            |        2012 |
 | Explicit period                           | 2013 - 2015 |
+
+** Problem 2
+   Company Delta is listed on the market with 200 shares and a current price of 5. Delta needs to invest 500 in new projects and wants to raise funds on the market, but local regulation requires to give preemptive rights to existing shareholders. Delta issues a press release saying "raising 500 @ 20% TERP discount". Estimate TERP, subscription price, new shares issued, gross discount and the trading value of the rights.
+   Re-work the previous exercise but starting with this alternative press release: "raising a total of 500, shares @ 3.5 each" (i.e. not knowing that TERP discount is 20%).
+
+** Problem 3
+   Company A acquired and merged Company B. The acquisition was paid by issuing new stocks. The exchange ratio defined between parties was 0.55. Based on data provided below and assuming synergies equal to 400 determine the minimum and maximum exchange ratios for the parties and the return for shareholders of company A and company B.
