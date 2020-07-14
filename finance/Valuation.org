@@ -275,6 +275,14 @@ We should be consistet in which time period to choose in calculated, and then ap
 *** Private Benefits
 ** Other Determinants of Control Premium
 ** Acquisition Value in a Mandatory Tender Offer
+   The weighted price paid for 100 percent of the capital of the target company must be less than or equal to the total acquisition value of the shares.
+   P_{pc}*a + [(P_{pc} _ P_{m})/2]*(1 - a) < w_{acq}
+   where
+   P_{pc} = price per share bought off market 
+   a = percentage of capital represented by above block
+   P_{m} = avg market price 
+   w_{acq} = unit acquisition value
+
 ** Maximum and Minimum Exchange Ratios in Mergers
 ** Exchange Ratio and Third-Party Protection 
 * DONE Value in Corporate Control
