@@ -282,8 +282,9 @@ We should be consistet in which time period to choose in calculated, and then ap
    a = percentage of capital represented by above block
    P_{m} = avg market price 
    w_{acq} = unit acquisition value
-
 ** Maximum and Minimum Exchange Ratios in Mergers
+   - Maximum value of ER is one that has neutral impact on shares of *buying company*
+   - Minimum value of ER is one that has neutral impact on shares of *target company*
 ** Exchange Ratio and Third-Party Protection 
 * DONE Value in Corporate Control
   CLOSED: [2020-07-14 Tue 02:35]
@@ -307,9 +308,17 @@ Break-up value = Company's assets - Charge for realizing breakup
 * DONE Rights Issue
   CLOSED: [2020-07-13 Mon 09:03]
 ** Definitions
+*** Cum Right price = p = Stock price just before anouncement
 *** Subscription Offer = Preemptive Rights granted to existing shareholders to buy stock  in order to raise  money :Definition:
+*** Subscription Price = P
 *** TERP = Theoretical Ex-Right Price
+*** Discount to TERP = D = (TERP - P) / TERP
+*** Gross discount = (p - P) / P
 ** Setting subscription price                                          
+  From law of conversation of value
+  TERP = [(n * p) + (N * P) ] / (n + N)
+*** Setting discount
+    0 < D < (n * p) / (n*p + S)
 ** Valuing Preemptive rights
 * DONE Carbon
   CLOSED: [2020-07-06 Mon 17:32]
@@ -385,7 +394,6 @@ Therefore K_{eu} = r_{f} + ß*MRP = 0.03 + 0.93382635*0.06
 | Short term Financial debt   | 2560.0 | 2400.0 |
 | Long term Financial debt    | 1900.0 | 1780.0 |
 | Depreciation                |  140.0 |  150.0 |
-
 
 * Exercise 2
 ** Problem 1
