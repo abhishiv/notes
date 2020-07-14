@@ -277,7 +277,8 @@ We should be consistet in which time period to choose in calculated, and then ap
 ** Acquisition Value in a Mandatory Tender Offer
 ** Maximum and Minimum Exchange Ratios in Mergers
 ** Exchange Ratio and Third-Party Protection 
-* TODO Value in Corporate Control
+* DONE Value in Corporate Control
+  CLOSED: [2020-07-14 Tue 02:35]
 ** Price Formation
 *** Competitive Market
     The market for acquisitions is not competitive if, on the other hand, a significant number of firms is not interested in external growth opportunities.
@@ -335,12 +336,12 @@ Break-up value = Company's assets - Charge for realizing breakup
     𝜇_{i} =r_{f} + 𝛽_{iM}*(𝜇_{M} - r_{f}) + 𝛽_{iCO2}*(𝜇_{CO2} − r_{f})
 *** Application
 
-* Excercise 1
+* Exercise 1
 ** Problem 2                                                           :Beta:
-     ACME corporation is a utility company whose corporate tax rate is 33%. The reference free risk rate is equal to 3% and the expected market return is 9%. Using data on beta comparables and assuming kD = kTS and βD = 0 shown in the following table determine the kEU value of the company.
+     ACME corporation is a utility company whose corporate tax rate is 33%. The reference free risk rate is equal to 3% and the expected market return is 9%. Using data on beta comparable and assuming k_{d} = k_{ts} and β_{d} = 0 shown in the following table determine the kEU value of the company.
 
 #+NAME: Ex1P2IndustryBetaTable
-| # | Accounts Payable | Mkt Capital | Short term D | Long term D |   Cash |  Beta |
+| # | Accounts Payable | Mkt. Capital | Short term D | Long term D |   Cash |  Beta |
 |---+------------------+-------------+--------------+-------------+--------+-------|
 | 1 |            876.0 |     16803.5 |       4564.0 |           0 | 1657.6 | 0.910 |
 | 2 |           1478.1 |     17396.4 |       4376.4 |      2527.0 |  714.0 | 1.320 |
@@ -348,7 +349,7 @@ Break-up value = Company's assets - Charge for realizing breakup
 #+TBLFM:
 
 #+NAME: Ex1P2IndustryBetaCalculation
-| # | Net debt | leverage ratio | Unleverd Beta |
+| # | Net debt | leverage ratio | Unlevered Beta |
 |---+----------+----------------+---------------|
 | 1 |   2906.4 |      17.296397 |    0.81549559 |
 | 2 |   6189.4 |      35.578625 |     1.0659115 |
@@ -361,15 +362,15 @@ Therefore K_{eu} = r_{f} + ß*MRP = 0.03 + 0.93382635*0.06
 
 ** Problem 3                                                             :EV:
      Consider the following data of Beta at year 2011 and year 2012 together with the data of the previous exercise and assuming a steady state scenario, calculate:
-     - Beta‚ asset unlevered EV, levered EV and equity value with APV (assuming risk free debt and kTXA = kD)
+     - Beta‚ asset unlevered EV, levered EV and equity value with APV (assuming risk free debt and k_{txa} = k_{d})
      - Beta‚ asset enterprise and equity value with DCF (assuming a D/E target ratio equal to 11% and kD equal to 3%)
 
 | Company Beta                |   2011 |   2012 |
 |-----------------------------+--------+--------|
 | EBIT                        | 4800.0 | 5340.0 |
 | Investment                  |  290.0 |  530.0 |
-| Divestitures                |      0 |  340.0 |
-| Account payables            |  410.0 |  380.0 |
+| Divestiture                |      0 |  340.0 |
+| Account payable            |  410.0 |  380.0 |
 | Account receivable          |  180.0 |  250.0 |
 | Inventories                 |   75.0 |   80.0 |
 | Excess cash and equivalents |   32.0 |   92.0 |
@@ -378,7 +379,7 @@ Therefore K_{eu} = r_{f} + ß*MRP = 0.03 + 0.93382635*0.06
 | Depreciation                |  140.0 |  150.0 |
 
 
-* Ex 2
+* Exercise 2
 ** Problem 1
      On the basis of the information provided, and applying a tax rate = 30%, estimate:
      - Industry average unlevered beta from the panel of comparable below and assuming kD = kTS and βD = 0
