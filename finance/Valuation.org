@@ -220,6 +220,7 @@ We should be consistet in which time period to choose in calculated, and then ap
 ** Multiples and Growth
 ** PEG Ratio
 ** Value Maps
+   
 * DONE Acquisition Value
   CLOSED: [2020-07-13 Mon 09:03] DEADLINE: <2020-07-06 Tue 20:00-23:55>
 ** Definitions
@@ -345,13 +346,14 @@ Break-up value = Company's assets - Charge for realizing breakup
 | 2 |           1478.1 |     17396.4 |       4376.4 |      2527.0 |  714.0 | 1.320 |
 | 3 |            554.3 |     16790.2 |       6314.0 |      9695.0 |  213.5 | 1.500 |
 #+TBLFM:
+
 #+NAME: Ex1P2IndustryBetaCalculation
 | # | Net debt | leverage ratio | Unleverd Beta |
 |---+----------+----------------+---------------|
 | 1 |   2906.4 |      17.296397 |    0.81549559 |
 | 2 |   6189.4 |      35.578625 |     1.0659115 |
 | 0 |  15795.5 |      94.075711 |    0.92007196 |
-|---+----------+----------------+---------------|
+|--+----------+----------------+---------------|
 |   |          |                |    0.93382635 |
 #+TBLFM: @>$4=vmean(@I..II)::@2$2..@4$2=vsum(remote(Ex1P2IndustryBetaTable,@@#$4) + remote(Ex1P2IndustryBetaTable,@@#$5) - remote(Ex1P2IndustryBetaTable,@@#$6))::@2$3..@4$3=@@#$2 * 100 / remote(Ex1P2IndustryBetaTable,@@#$3)::@2$4..@4$4=remote(Ex1P2IndustryBetaTable,@@#$7) / (1 + (1 - 0.33 )* (@@#$3/100) )
 
