@@ -9,7 +9,8 @@
 #+OPTIONS: num:nil
 #+OPTIONS: \n:t
 #+HTML_LINK_HOME: /
-* IN-PROGRESS Restating Financial Statements
+* DONE Restating Financial Statements
+  CLOSED: [2020-07-14 Tue 04:54]
 ** Definitions 
 *** Accounting
 **** ASSETS = LIABILITIES + EQUITY
@@ -146,7 +147,8 @@
 
 ** Calculating Cashflow(FCF = "Free Cash Flow")
 
-* TODO Estimating Cost of Capital
+* DONE Estimating Cost of Capital
+  CLOSED: [2020-07-14 Tue 04:54]
 ** Definitions 
 *** K_{eu}: unlevered cost of equity
     Rate of return acceptable by equity investors in a completely unlevered firm. Reflects the risk profile associated with corporate assets ignoring capital structure.
@@ -163,8 +165,6 @@
      Use industry beta, instead of company beta. To undo/normalise the effect of leverage use Modiligani and Miller.
 ** Estimating cost of debt
    After-Tax Cost of Debt = Cost of Debt × (1 − T_{m})
-* TODO Steady State Model
-* TODO Terminal Value
 * TODO Multiples  
   DEADLINE: <2020-07-06 Mon 18:00-20:00>
   The multiples method seeks to develop a relationship between the actual price of shares of comparable listed companies and an accounting metric (such as net income, cash flows, revenues, etc.)
@@ -219,8 +219,7 @@ We should be consistet in which time period to choose in calculated, and then ap
 ** Unlevered Multiples
 ** Multiples and Growth
 ** PEG Ratio
-** Value Maps
-   
+** Value Maps   
 * DONE Acquisition Value
   CLOSED: [2020-07-13 Mon 09:03] DEADLINE: <2020-07-06 Tue 20:00-23:55>
 ** Definitions
@@ -308,12 +307,12 @@ Break-up value = Company's assets - Charge for realizing breakup
 * DONE Rights Issue
   CLOSED: [2020-07-13 Mon 09:03]
 ** Definitions
-*** Cum Right price = p = Stock price just before anouncement
-*** Subscription Offer = Preemptive Rights granted to existing shareholders to buy stock  in order to raise  money :Definition:
-*** Subscription Price = P
-*** TERP = Theoretical Ex-Right Price
-*** Discount to TERP = D = (TERP - P) / TERP
-*** Gross discount = (p - P) / P
+- Cum Right price = p = Stock price just before anouncement
+- Subscription Offer = Preemptive Rights granted to existing shareholders to buy stock  in order to raise  money :Definition:
+- Subscription Price = P
+- TERP = Theoretical Ex-Right Price
+- Discount to TERP = D = (TERP - P) / TERP
+- Gross discount = (p - P) / P
 ** Setting subscription price                                          
   From law of conversation of value
   TERP = [(n * p) + (N * P) ] / (n + N)
