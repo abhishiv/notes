@@ -9,6 +9,25 @@
 #+OPTIONS: num:nil
 #+OPTIONS: \n:t
 #+HTML_LINK_HOME: /
+
+* Determining Cash flows
+** Introduction
+*** Sum of parts v/s whole
+    Prefer sum of parts when
+**** Risk profile is different across business units
+**** Growth prospects differ across business units
+*** FCFO and FCFE
+** Reorganization of the balance sheet
+   - Financial v/s Functional approach
+   - Functional approach differentiates between core operating assets and surplus assets
+   - Measures NIC/WC for use in valuation
+*** Uses of funds in operations
+*** Source of funds
+*** Reorganization example
+** Relationship between Balancesheet and Income Statement 
+** From Economic to Financial 
+** Cash flows and Valuation models
+** Cash flow projections
 * DONE Restating Financial Statements
   CLOSED: [2020-07-14 Tue 04:54]
 ** Definitions 
@@ -307,18 +326,24 @@ Break-up value = Company's assets - Charge for realizing breakup
 * DONE Rights Issue
   CLOSED: [2020-07-13 Mon 09:03]
 ** Definitions
-- Cum Right price = p = Stock price just before anouncement
+- Cum-Right price = p = Stock price just before announcement
 - Subscription Offer = Preemptive Rights granted to existing shareholders to buy stock  in order to raise  money :Definition:
 - Subscription Price = P
 - TERP = Theoretical Ex-Right Price
 - Discount to TERP = D = (TERP - P) / TERP
 - Gross discount = (p - P) / P
+- VR = Theoretical value of one right 
+- R = Number of rights needed to subscribe to one share
 ** Setting subscription price                                          
   From law of conversation of value
   TERP = [(n * p) + (N * P) ] / (n + N)
 *** Setting discount
     0 < D < (n * p) / (n*p + S)
 ** Valuing Preemptive rights
+   TERP = R * VR + P
+*** Ex Right Price
+    During subscription period following relationship should hold
+    ERP = R * VR + P
 * DONE Carbon
   CLOSED: [2020-07-06 Mon 17:32]
 ** Definitions
