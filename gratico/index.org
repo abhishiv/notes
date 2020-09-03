@@ -1,0 +1,59 @@
+#+TITLE: grati.co
+#+AUTHOR: Abhishiv Saxena
+#+URL: https://abhishiv.netlify.app/gratico/index
+#+STARTUP: overview
+#+STARTUP: hideblocks
+#+PROPERTY: header-args :mkdirp yes :noweb yes
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" type="text/css" href="../org/theme/styles.css" />
+#+HTML_HEAD_EXTRA: <script type="text/javascript" src="../org/theme/index.js" />
+#+OPTIONS: num:nil
+#+OPTIONS: \n:t
+#+HTML_LINK_HOME: /
+
+* Introduction
+
+** Features
+
+- Polymorphic Document Format
+- Extensible IDE
+
+** Example Document Format
+
+- Code/Typescript using Language Bridge
+- Table
+- MDX
+- Test Files
+- Storybook
+- GraphQL
+- CSS Styles
+- SVG Editor
+ 
+** Language Bridge
+   
+   Simple typed language AST format to interface over multiple GPL Languages like typescript/python etc. 
+
+   - BasicLiterals
+   - Object/Arrays
+   - FunctionDeclaration
+   - FunctionApplication
+   - Identifiers
+   - VariableDeclation
+   - JSXElement
+   - TypeDeclaration
+   - InterfaceDeclaration
+   - Types 
+     - LiteralTypes("john")
+     - BasicTypes(string | number | boolean | null | undefined | any | unknown)
+     - PolymorphicTypes(to describe Functions/List/Tuple/Object)
+
+*** Implication
+    Due to simple structure of AST 
+    - we can transpile to multiple languages
+    - Easily create JSONSchema for types generated
+
+** Editor 
+      
+** UI Editor(React/Typescript)
+
+   
+   
