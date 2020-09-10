@@ -16,6 +16,11 @@
 
 - Polymorphic Document Format
 - Extensible IDE
+- Extensible REPL/Runtime
+- Support for legacy code
+- Tags
+- Preview
+- Tests
 
 ** Example Document Format
 
@@ -32,19 +37,21 @@
    
    Simple typed language AST format to interface over multiple GPL Languages like typescript/python etc. 
 
-   - BasicLiterals
-   - Object/Arrays
-   - FunctionDeclaration
-   - FunctionApplication
+   - BasicLiterals(String/Number/Boolean/Null/Undefined/Void)
+   - Object
+   - Arrays
    - Identifiers
-   - VariableDeclation
+   - VariableAssignment
+   - Function
+   - FunctionApplication
    - JSXElement
+   - JSXExpression
    - TypeDeclaration
    - InterfaceDeclaration
    - Types 
      - LiteralTypes("john")
      - BasicTypes(string | number | boolean | null | undefined | any | unknown)
-     - PolymorphicTypes(to describe Functions/List/Tuple/Object)
+     - TypeApplication(to describe Functions/List/Tuple/Object)
 
 *** Implication
     Due to simple structure of AST 
@@ -55,5 +62,47 @@
       
 ** UI Editor(React/Typescript)
 
+* Editor
+* UI Editor
+  
+** Architecture 
+
+*** Root<RootProps>
+**** ComponentList
+     Loops through document and display all React Components in scope and the html ones.
+**** Canvas
+     Compiles AST into TS and loads it into runtime to render it.
+**** PropEditor
+     Shows props and allows to edit their value for selectedBlock.
+**** StyleEditor
+     If selected prop is style.
+***** Layout/Display
+***** Spacing
+***** Size
+***** Position
+***** Background
+***** Border
+***** Typography
+***** Effects
+
+*** Typeschecker Intergation   
    
+   Required methods
+   - getFunctionType
+   - getType
+   - 
    
+#+BEGIN_SRC typescript :tangle "../../../work/gratico/grati.co/packages/kernel/src/specs/ui.tsx" :exports none :noweb yes :eval no
+     import ts from 'typescript'
+     import {IKernel} from './kernel'
+     import {INode} from '../langauge/language'
+     export interface RootProps {
+         kernel: IKernel
+         document: INode,
+         path: any[];
+         selectedBlock: any[];
+         typechecker: ts.typechecker
+     }
+
+ #+END_SRC
+

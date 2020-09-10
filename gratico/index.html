@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-09-04 Fri 01:48 -->
+<!-- 2020-09-10 Thu 16:00 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>grati.co</title>
@@ -253,105 +253,92 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org4c41ea1">Introduction</a>
+<li><a href="#orgbb2fd58">UI Editor</a>
 <ul>
-<li><a href="#orgd1b730e">Features</a></li>
-<li><a href="#org89f43aa">Example Document Format</a></li>
-<li><a href="#orgc970bd4">Language Bridge</a>
+<li><a href="#orgd6ca1da">Architecture</a>
 <ul>
-<li><a href="#org968aa08">Implication</a></li>
+<li><a href="#orgc27c351">Root&lt;RootProps&gt;</a></li>
+<li><a href="#orgdf5c244">Typeschecker Intergation</a></li>
 </ul>
 </li>
-<li><a href="#org49caf7a">Editor</a></li>
-<li><a href="#orgfcd9cd2">UI Editor(React/Typescript)</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-
-<div id="outline-container-org4c41ea1" class="outline-2">
-<h2 id="org4c41ea1">Introduction</h2>
-<div class="outline-text-2" id="text-org4c41ea1">
+<div id="outline-container-orgbb2fd58" class="outline-2">
+<h2 id="orgbb2fd58">UI Editor</h2>
+<div class="outline-text-2" id="text-orgbb2fd58">
 </div>
-<div id="outline-container-orgd1b730e" class="outline-3">
-<h3 id="orgd1b730e">Features</h3>
-<div class="outline-text-3" id="text-orgd1b730e">
+<div id="outline-container-orgd6ca1da" class="outline-3">
+<h3 id="orgd6ca1da">Architecture</h3>
+<div class="outline-text-3" id="text-orgd6ca1da">
+</div>
+<div id="outline-container-orgc27c351" class="outline-4">
+<h4 id="orgc27c351">Root&lt;RootProps&gt;</h4>
+<div class="outline-text-4" id="text-orgc27c351">
+</div>
 <ul class="org-ul">
-<li>Polymorphic Document Format<br /></li>
-<li>Extensible IDE<br /></li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-org89f43aa" class="outline-3">
-<h3 id="org89f43aa">Example Document Format</h3>
-<div class="outline-text-3" id="text-org89f43aa">
-<ul class="org-ul">
-<li>Code/Typescript using Language Bridge<br /></li>
-<li>Table<br /></li>
-<li>MDX<br /></li>
-<li>Test Files<br /></li>
-<li>Storybook<br /></li>
-<li>GraphQL<br /></li>
-<li>CSS Styles<br /></li>
-<li>SVG Editor<br /></li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-orgc970bd4" class="outline-3">
-<h3 id="orgc970bd4">Language Bridge</h3>
-<div class="outline-text-3" id="text-orgc970bd4">
+<li><a id="org25d7af4"></a>ComponentList<br />
+<div class="outline-text-5" id="text-org25d7af4">
 <p>
-Simple typed language AST format to interface over multiple GPL Languages like typescript/python etc.<br />
+Loops through document and display all React Components in scope and the html ones.<br />
 </p>
-
+</div>
+</li>
+<li><a id="orgc72e83f"></a>Canvas<br />
+<div class="outline-text-5" id="text-orgc72e83f">
+<p>
+Compiles AST into TS and loads it into runtime to render it.<br />
+</p>
+</div>
+</li>
+<li><a id="orgafbb0f4"></a>PropEditor<br />
+<div class="outline-text-5" id="text-orgafbb0f4">
+<p>
+Shows props and allows to edit their value for selectedBlock.<br />
+</p>
+</div>
+</li>
+<li><a id="org294ed27"></a>StyleEditor<br />
+<div class="outline-text-5" id="text-org294ed27">
+<p>
+If selected prop is style.<br />
+</p>
+</div>
 <ul class="org-ul">
-<li>BasicLiterals<br /></li>
-<li>Object/Arrays<br /></li>
-<li>FunctionDeclaration<br /></li>
-<li>FunctionApplication<br /></li>
-<li>Identifiers<br /></li>
-<li>VariableDeclation<br /></li>
-<li>JSXElement<br /></li>
-<li>TypeDeclaration<br /></li>
-<li>InterfaceDeclaration<br /></li>
-<li>Types<br />
-<ul class="org-ul">
-<li>LiteralTypes("john")<br /></li>
-<li>BasicTypes(string | number | boolean | null | undefined | any | unknown)<br /></li>
-<li>PolymorphicTypes(to describe Functions/List/Tuple/Object)<br /></li>
-</ul></li>
+<li><a id="orgd627036"></a>Layout/Display<br /></li>
+<li><a id="org44670d0"></a>Spacing<br /></li>
+<li><a id="org1d9e93a"></a>Size<br /></li>
+<li><a id="orgc3f9956"></a>Position<br /></li>
+<li><a id="orga92a6b5"></a>Background<br /></li>
+<li><a id="org6ce1373"></a>Border<br /></li>
+<li><a id="org71a2f0b"></a>Typography<br /></li>
+<li><a id="orge6ffe2a"></a>Effects<br /></li>
+</ul>
+</li>
 </ul>
 </div>
 
-<div id="outline-container-org968aa08" class="outline-4">
-<h4 id="org968aa08">Implication</h4>
-<div class="outline-text-4" id="text-org968aa08">
+<div id="outline-container-orgdf5c244" class="outline-4">
+<h4 id="orgdf5c244">Typeschecker Intergation</h4>
+<div class="outline-text-4" id="text-orgdf5c244">
 <p>
-Due to simple structure of AST<br />
+Required methods<br />
 </p>
 <ul class="org-ul">
-<li>we can transpile to multiple languages<br /></li>
-<li>Easily create JSONSchema for types generated<br /></li>
+<li>getFunctionType<br /></li>
+<li>getType<br /></li>
+<li></li>
 </ul>
 </div>
 </div>
-</div>
-
-<div id="outline-container-org49caf7a" class="outline-3">
-<h3 id="org49caf7a">Editor</h3>
-</div>
-
-<div id="outline-container-orgfcd9cd2" class="outline-3">
-<h3 id="orgfcd9cd2">UI Editor(React/Typescript)</h3>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Abhishiv Saxena</p>
-<p class="date">Created: 2020-09-04 Fri 01:48</p>
+<p class="date">Created: 2020-09-10 Thu 16:00</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
