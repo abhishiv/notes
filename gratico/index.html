@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-09-10 Thu 16:54 -->
+<!-- 2020-09-10 Thu 19:29 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>grati.co</title>
@@ -253,26 +253,24 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org198dd1e">Introduction</a>
+<li><a href="#orge9cda7f">Introduction</a>
 <ul>
-<li><a href="#org9751eea">Features</a></li>
-<li><a href="#org1bea88a">Example Document Format</a></li>
-<li><a href="#org1258d38">Language Bridge</a>
-<ul>
-<li><a href="#org759cb4d">Implication</a></li>
+<li><a href="#org7e25538">Features</a></li>
+<li><a href="#orga228de2">Example Document Format</a></li>
 </ul>
 </li>
-<li><a href="#orge07a373">Editor</a></li>
-<li><a href="#orgce49df9">UI Editor(React/Typescript)</a></li>
+<li><a href="#org5cbbb26">Language Bridge</a>
+<ul>
+<li><a href="#orgc414de8">Syntax</a></li>
+<li><a href="#orgf7b8c07">Implication</a></li>
 </ul>
 </li>
-<li><a href="#orgbf2052f">Editor</a></li>
-<li><a href="#org1fd4f73">UI Editor</a>
+<li><a href="#orga30fe14">UI Editor</a>
 <ul>
-<li><a href="#orgef8ae85">Architecture</a>
+<li><a href="#orgdae0d38">Architecture</a>
 <ul>
-<li><a href="#orgff17c43">Root&lt;RootProps&gt;</a></li>
-<li><a href="#orgfe19b7a">Typeschecker Intergation</a></li>
+<li><a href="#org65b9375">Root&lt;RootProps&gt;</a></li>
+<li><a href="#org24c7b36">Typeschecker Intergation</a></li>
 </ul>
 </li>
 </ul>
@@ -281,13 +279,13 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org198dd1e" class="outline-2">
-<h2 id="org198dd1e">Introduction</h2>
-<div class="outline-text-2" id="text-org198dd1e">
+<div id="outline-container-orge9cda7f" class="outline-2">
+<h2 id="orge9cda7f">Introduction</h2>
+<div class="outline-text-2" id="text-orge9cda7f">
 </div>
-<div id="outline-container-org9751eea" class="outline-3">
-<h3 id="org9751eea">Features</h3>
-<div class="outline-text-3" id="text-org9751eea">
+<div id="outline-container-org7e25538" class="outline-3">
+<h3 id="org7e25538">Features</h3>
+<div class="outline-text-3" id="text-org7e25538">
 <ul class="org-ul">
 <li>Polymorphic Document Format<br /></li>
 <li>Extensible IDE<br /></li>
@@ -300,9 +298,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org1bea88a" class="outline-3">
-<h3 id="org1bea88a">Example Document Format</h3>
-<div class="outline-text-3" id="text-org1bea88a">
+<div id="outline-container-orga228de2" class="outline-3">
+<h3 id="orga228de2">Example Document Format</h3>
+<div class="outline-text-3" id="text-orga228de2">
 <ul class="org-ul">
 <li>Code/Typescript using Language Bridge<br /></li>
 <li>Table<br /></li>
@@ -315,14 +313,18 @@ for the JavaScript code in this tag.
 </ul>
 </div>
 </div>
+</div>
 
-<div id="outline-container-org1258d38" class="outline-3">
-<h3 id="org1258d38">Language Bridge</h3>
-<div class="outline-text-3" id="text-org1258d38">
+<div id="outline-container-org5cbbb26" class="outline-2">
+<h2 id="org5cbbb26">Language Bridge</h2>
+<div class="outline-text-2" id="text-org5cbbb26">
 <p>
 Simple typed language AST format to interface over multiple GPL Languages like typescript/python etc.<br />
 </p>
-
+</div>
+<div id="outline-container-orgc414de8" class="outline-3">
+<h3 id="orgc414de8">Syntax</h3>
+<div class="outline-text-3" id="text-orgc414de8">
 <ul class="org-ul">
 <li>BasicLiterals(String/Number/Boolean/Null/Undefined/Void)<br /></li>
 <li>Object<br /></li>
@@ -343,10 +345,11 @@ Simple typed language AST format to interface over multiple GPL Languages like t
 </ul></li>
 </ul>
 </div>
+</div>
 
-<div id="outline-container-org759cb4d" class="outline-4">
-<h4 id="org759cb4d">Implication</h4>
-<div class="outline-text-4" id="text-org759cb4d">
+<div id="outline-container-orgf7b8c07" class="outline-3">
+<h3 id="orgf7b8c07">Implication</h3>
+<div class="outline-text-3" id="text-orgf7b8c07">
 <p>
 Due to simple structure of AST<br />
 </p>
@@ -358,75 +361,63 @@ Due to simple structure of AST<br />
 </div>
 </div>
 
-<div id="outline-container-orge07a373" class="outline-3">
-<h3 id="orge07a373">Editor</h3>
+<div id="outline-container-orga30fe14" class="outline-2">
+<h2 id="orga30fe14">UI Editor</h2>
+<div class="outline-text-2" id="text-orga30fe14">
 </div>
-
-<div id="outline-container-orgce49df9" class="outline-3">
-<h3 id="orgce49df9">UI Editor(React/Typescript)</h3>
+<div id="outline-container-orgdae0d38" class="outline-3">
+<h3 id="orgdae0d38">Architecture</h3>
+<div class="outline-text-3" id="text-orgdae0d38">
 </div>
-</div>
-
-<div id="outline-container-orgbf2052f" class="outline-2">
-<h2 id="orgbf2052f">Editor</h2>
-</div>
-<div id="outline-container-org1fd4f73" class="outline-2">
-<h2 id="org1fd4f73">UI Editor</h2>
-<div class="outline-text-2" id="text-org1fd4f73">
-</div>
-<div id="outline-container-orgef8ae85" class="outline-3">
-<h3 id="orgef8ae85">Architecture</h3>
-<div class="outline-text-3" id="text-orgef8ae85">
-</div>
-<div id="outline-container-orgff17c43" class="outline-4">
-<h4 id="orgff17c43">Root&lt;RootProps&gt;</h4>
-<div class="outline-text-4" id="text-orgff17c43">
+<div id="outline-container-org65b9375" class="outline-4">
+<h4 id="org65b9375">Root&lt;RootProps&gt;</h4>
+<div class="outline-text-4" id="text-org65b9375">
 </div>
 <ul class="org-ul">
-<li><a id="org36c3bf2"></a>ComponentList<br />
-<div class="outline-text-5" id="text-org36c3bf2">
+<li><a id="org8b8762d"></a>ComponentList<br />
+<div class="outline-text-5" id="text-org8b8762d">
 <p>
 Loops through document and display all React Components in scope and the html ones.<br />
 </p>
 </div>
 </li>
-<li><a id="org612f4a5"></a>Canvas<br />
-<div class="outline-text-5" id="text-org612f4a5">
+<li><a id="orgb467842"></a>Canvas<br />
+<div class="outline-text-5" id="text-orgb467842">
 <p>
 Compiles AST into TS and loads it into runtime to render it.<br />
 </p>
 </div>
 </li>
-<li><a id="org700da62"></a>PropEditor<br />
-<div class="outline-text-5" id="text-org700da62">
+<li><a id="org7209750"></a>PropEditor<br />
+<div class="outline-text-5" id="text-org7209750">
 <p>
 Shows props and allows to edit their value for selectedBlock.<br />
 </p>
 </div>
 </li>
-<li><a id="org60cfde6"></a>StyleEditor<br />
-<div class="outline-text-5" id="text-org60cfde6">
+<li><a id="orga5eba23"></a>StyleEditor<br />
+<div class="outline-text-5" id="text-orga5eba23">
 <p>
 If selected prop is style.<br />
 </p>
 </div>
 <ul class="org-ul">
-<li><a id="org9f16ea0"></a>Layout/Display<br /></li>
-<li><a id="orgf3443b1"></a>Spacing<br /></li>
-<li><a id="orga19e6c3"></a>Size<br /></li>
-<li><a id="org6ea46ea"></a>Position<br /></li>
-<li><a id="orgafa87e6"></a>Background<br /></li>
-<li><a id="org15abe4b"></a>Border<br /></li>
-<li><a id="orgaa5a7b3"></a>Typography<br /></li>
-<li><a id="orgcb1983a"></a>Effects<br /></li>
+<li><a id="org98af170"></a>Layout/Display<br /></li>
+<li><a id="orgd810707"></a>Spacing<br /></li>
+<li><a id="orgaffeaf3"></a>Size<br /></li>
+<li><a id="org13fc5bc"></a>Position<br /></li>
+<li><a id="org6ded544"></a>Background<br /></li>
+<li><a id="org84307b1"></a>Border<br /></li>
+<li><a id="org5669935"></a>Typography<br /></li>
+<li><a id="orgfd173c8"></a>Effects<br /></li>
 </ul>
 </li>
 </ul>
 </div>
 
-<div id="outline-container-orgfe19b7a" class="outline-4">
-<h4 id="orgfe19b7a">Typeschecker Intergation</h4>
-<div class="outline-text-4" id="text-orgfe19b7a">
+<div id="outline-container-org24c7b36" class="outline-4">
+<h4 id="org24c7b36">Typeschecker Intergation</h4>
+<div class="outline-text-4" id="text-org24c7b36">
 <p>
 Required methods<br />
 </p>
@@ -457,7 +448,7 @@ Required methods<br />
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Abhishiv Saxena</p>
-<p class="date">Created: 2020-09-10 Thu 16:54</p>
+<p class="date">Created: 2020-09-10 Thu 19:29</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

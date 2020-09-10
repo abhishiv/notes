@@ -33,10 +33,10 @@
 - CSS Styles
 - SVG Editor
  
-** Language Bridge
+* Language Bridge
    
    Simple typed language AST format to interface over multiple GPL Languages like typescript/python etc. 
-
+** Syntax
    - BasicLiterals(String/Number/Boolean/Null/Undefined/Void)
    - Object
    - Arrays
@@ -53,16 +53,11 @@
      - BasicTypes(string | number | boolean | null | undefined | any | unknown)
      - TypeApplication(to describe Functions/List/Tuple/Object)
 
-*** Implication
+** Implication
     Due to simple structure of AST 
     - we can transpile to multiple languages
     - Easily create JSONSchema for types generated
 
-** Editor 
-      
-** UI Editor(React/Typescript)
-
-* Editor
 * UI Editor
   
 ** Architecture 
