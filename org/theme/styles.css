@@ -79,8 +79,9 @@ table {
 }
 
 a {
-    color: steelblue; 
+    color: white; 
     text-decoration: underline;
+    
 
 }
 
@@ -125,7 +126,6 @@ div#table-of-contents {
 
 }
 #table-of-contents a.active {
-    color: royalblue;
     color: black;
     font-weight: bold;
     text-decoration:underline;
