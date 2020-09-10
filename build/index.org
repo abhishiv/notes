@@ -9,9 +9,7 @@
 #+HTML_HEAD_EXTRA: <script type="text/javascript" src="../org/theme/index.js" />
 #+OPTIONS: num:nil
 #+HTML_LINK_HOME: /
-* Finance
-** [[./finance/Valuation][Corporate Valuation - DCF, APV, M&A]]
-* Computer Science
-** Projectional Editing
-*** [[https://www.grati.co][grati.co - DSL Workbench]]
-**** [[https://www.grati.co/_docs][Developer documentation]]
+
+* grati.co - DSL Workbench
+** [[https://www.grati.co][Homepage]]
+** [[./gratico/index][Architecture]]     
