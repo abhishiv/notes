@@ -75,6 +75,7 @@ html, body {
 table {
     background: white;
     border: 1px;
+    color: black;
     font-family: monospace;
 }
 
@@ -92,6 +93,9 @@ h1,h2,h3,h4,h5,h6,h7,h8,h9,h10 {
     /* font-family: "Slabo 27px"; */
     /* text-transform: uppercase; */
     font-family: "GT Walsheim Pro";
+    /* font-family: "Fira Sans"; */
+    font-family: "Fira Sans";
+
 }
 #content {
     padding-left: 300px;
@@ -162,9 +166,7 @@ tbody {
 
 }
 div#text-table-of-contents > ul > li > a {
-    text-transform: uppercase;
-    /* color: black; */
-    font-family: "GT Walsheim Pro";
+    color: black;
     font-weight: bold;
 }
 
