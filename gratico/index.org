@@ -92,17 +92,17 @@
    - getType
    - 
    
-#+BEGIN_SRC typescript :tangle "../../../work/gratico/grati.co/packages/kernel/src/specs/ui.tsx" :exports none :noweb yes :eval no
-     import ts from 'typescript'
-     import {IKernel} from './kernel'
-     import {INode} from '../langauge/language'
-     export interface RootProps {
-         kernel: IKernel
-         document: INode,
-         path: any[];
-         selectedBlock: any[];
-         typechecker: ts.typechecker
-     }
+#+BEGIN_SRC typescript :tangle "../../../work/gratico/grati.co/packages/kernel/src/specs/ui.tsx" :noweb yes :eval no
+  import ts from 'typescript'
+  import {IKernel} from './kernel'
+  import {INode} from '../langauge/language'
+  export interface RootProps {
+      kernel: IKernel
+      document: INode,
+      path: any[];
+      selectedBlock: any[];
+      typechecker: ts.typechecker
+  }
 
  #+END_SRC
 

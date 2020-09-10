@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-09-10 Thu 16:00 -->
+<!-- 2020-09-10 Thu 16:03 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>grati.co</title>
@@ -253,12 +253,12 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgbb2fd58">UI Editor</a>
+<li><a href="#org2c6a44f">UI Editor</a>
 <ul>
-<li><a href="#orgd6ca1da">Architecture</a>
+<li><a href="#orgfe0d351">Architecture</a>
 <ul>
-<li><a href="#orgc27c351">Root&lt;RootProps&gt;</a></li>
-<li><a href="#orgdf5c244">Typeschecker Intergation</a></li>
+<li><a href="#org074b0e9">Root&lt;RootProps&gt;</a></li>
+<li><a href="#org9753ce2">Typeschecker Intergation</a></li>
 </ul>
 </li>
 </ul>
@@ -266,63 +266,63 @@ for the JavaScript code in this tag.
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbb2fd58" class="outline-2">
-<h2 id="orgbb2fd58">UI Editor</h2>
-<div class="outline-text-2" id="text-orgbb2fd58">
+<div id="outline-container-org2c6a44f" class="outline-2">
+<h2 id="org2c6a44f">UI Editor</h2>
+<div class="outline-text-2" id="text-org2c6a44f">
 </div>
-<div id="outline-container-orgd6ca1da" class="outline-3">
-<h3 id="orgd6ca1da">Architecture</h3>
-<div class="outline-text-3" id="text-orgd6ca1da">
+<div id="outline-container-orgfe0d351" class="outline-3">
+<h3 id="orgfe0d351">Architecture</h3>
+<div class="outline-text-3" id="text-orgfe0d351">
 </div>
-<div id="outline-container-orgc27c351" class="outline-4">
-<h4 id="orgc27c351">Root&lt;RootProps&gt;</h4>
-<div class="outline-text-4" id="text-orgc27c351">
+<div id="outline-container-org074b0e9" class="outline-4">
+<h4 id="org074b0e9">Root&lt;RootProps&gt;</h4>
+<div class="outline-text-4" id="text-org074b0e9">
 </div>
 <ul class="org-ul">
-<li><a id="org25d7af4"></a>ComponentList<br />
-<div class="outline-text-5" id="text-org25d7af4">
+<li><a id="orgec2411f"></a>ComponentList<br />
+<div class="outline-text-5" id="text-orgec2411f">
 <p>
 Loops through document and display all React Components in scope and the html ones.<br />
 </p>
 </div>
 </li>
-<li><a id="orgc72e83f"></a>Canvas<br />
-<div class="outline-text-5" id="text-orgc72e83f">
+<li><a id="org20ad634"></a>Canvas<br />
+<div class="outline-text-5" id="text-org20ad634">
 <p>
 Compiles AST into TS and loads it into runtime to render it.<br />
 </p>
 </div>
 </li>
-<li><a id="orgafbb0f4"></a>PropEditor<br />
-<div class="outline-text-5" id="text-orgafbb0f4">
+<li><a id="org7789d7b"></a>PropEditor<br />
+<div class="outline-text-5" id="text-org7789d7b">
 <p>
 Shows props and allows to edit their value for selectedBlock.<br />
 </p>
 </div>
 </li>
-<li><a id="org294ed27"></a>StyleEditor<br />
-<div class="outline-text-5" id="text-org294ed27">
+<li><a id="org8d7cf15"></a>StyleEditor<br />
+<div class="outline-text-5" id="text-org8d7cf15">
 <p>
 If selected prop is style.<br />
 </p>
 </div>
 <ul class="org-ul">
-<li><a id="orgd627036"></a>Layout/Display<br /></li>
-<li><a id="org44670d0"></a>Spacing<br /></li>
-<li><a id="org1d9e93a"></a>Size<br /></li>
-<li><a id="orgc3f9956"></a>Position<br /></li>
-<li><a id="orga92a6b5"></a>Background<br /></li>
-<li><a id="org6ce1373"></a>Border<br /></li>
-<li><a id="org71a2f0b"></a>Typography<br /></li>
-<li><a id="orge6ffe2a"></a>Effects<br /></li>
+<li><a id="org2321405"></a>Layout/Display<br /></li>
+<li><a id="org6a8ea9b"></a>Spacing<br /></li>
+<li><a id="org9512e91"></a>Size<br /></li>
+<li><a id="org40d3045"></a>Position<br /></li>
+<li><a id="org296e692"></a>Background<br /></li>
+<li><a id="orgd6e1ee1"></a>Border<br /></li>
+<li><a id="orged9cf34"></a>Typography<br /></li>
+<li><a id="orge1e2bb7"></a>Effects<br /></li>
 </ul>
 </li>
 </ul>
 </div>
 
-<div id="outline-container-orgdf5c244" class="outline-4">
-<h4 id="orgdf5c244">Typeschecker Intergation</h4>
-<div class="outline-text-4" id="text-orgdf5c244">
+<div id="outline-container-org9753ce2" class="outline-4">
+<h4 id="org9753ce2">Typeschecker Intergation</h4>
+<div class="outline-text-4" id="text-org9753ce2">
 <p>
 Required methods<br />
 </p>
@@ -331,6 +331,21 @@ Required methods<br />
 <li>getType<br /></li>
 <li></li>
 </ul>
+
+<div class="org-src-container">
+<pre class="src src-typescript"><span style="color: #fb4933;">import</span> ts <span style="color: #fb4933;">from</span> <span style="color: #b8bb26;">'typescript'</span>
+<span style="color: #fb4933;">import</span> <span style="color: #458588;">{</span>IKernel<span style="color: #458588;">}</span> <span style="color: #fb4933;">from</span> <span style="color: #b8bb26;">'./kernel'</span>
+<span style="color: #fb4933;">import</span> <span style="color: #458588;">{</span>INode<span style="color: #458588;">}</span> <span style="color: #fb4933;">from</span> <span style="color: #b8bb26;">'../langauge/language'</span>
+<span style="color: #fb4933;">export</span> <span style="color: #fb4933;">interface</span> <span style="color: #d3869b;">RootProps</span> <span style="color: #458588;">{</span>
+    kernel: <span style="color: #d3869b;">IKernel</span>
+    document: <span style="color: #d3869b;">INode</span>,
+    path: <span style="color: #fb4933;">any</span><span style="color: #b16286;">[]</span>;
+    selectedBlock: <span style="color: #fb4933;">any</span><span style="color: #b16286;">[]</span>;
+    typechecker: ts.typechecker
+<span style="color: #458588;">}</span>
+
+</pre>
+</div>
 </div>
 </div>
 </div>
@@ -338,7 +353,7 @@ Required methods<br />
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Abhishiv Saxena</p>
-<p class="date">Created: 2020-09-10 Thu 16:00</p>
+<p class="date">Created: 2020-09-10 Thu 16:03</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
